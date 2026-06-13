@@ -1,0 +1,153 @@
+<ion-content [fullscreen]="true">
+
+  <!-- Header -->
+  <div class="header">
+
+    <ion-icon
+      name="arrow-back-outline"
+      routerLink="/booking-lapangan">
+    </ion-icon>
+
+    <h2>Ringkasan Order</h2>
+
+  </div>
+
+  <!-- Order Card -->
+  <div class="order-card">
+
+    <img
+      src="assets/images/home/lapangan1.png"
+      class="court-image">
+
+    <div class="order-info">
+
+      <div class="logo-text">
+        SHUTTLE
+      </div>
+
+      <h2>Gor Dewi</h2>
+
+      <div class="rating">
+        ⭐ 4.9/5.0
+      </div>
+
+      <p>Karawang Barat</p>
+
+      <small>
+        Sabtu, 11 September 2024, 09:00
+      </small>
+
+    </div>
+
+  </div>
+
+  <!-- Detail -->
+  <div class="section">
+
+    <h3>Detail Transaksi</h3>
+
+    <div class="detail-row">
+      <span>Lapangan</span>
+      <span>A</span>
+    </div>
+
+    <div class="detail-row">
+      <span>Jam</span>
+      <span>08.00-09.00</span>
+    </div>
+
+    <div class="detail-row">
+      <span>Biaya Lapangan</span>
+      <span>Rp40.000 x1</span>
+    </div>
+
+  </div>
+
+  <!-- Payment -->
+  <div class="section">
+
+    <h3>Metode Pembayaran</h3>
+
+    <div
+      class="payment-item"
+      [class.active]="selectedPayment === 'DANA'"
+      (click)="selectPayment('DANA')">
+
+      <span>DANA</span>
+
+      <div
+        class="radio"
+        [class.active]="selectedPayment === 'DANA'">
+      </div>
+
+    </div>
+
+    <div
+      class="payment-item"
+      [class.active]="selectedPayment === 'ShopeePay'"
+      (click)="selectPayment('ShopeePay')">
+
+      <span>ShopeePay</span>
+
+      <div
+        class="radio"
+        [class.active]="selectedPayment === 'ShopeePay'">
+      </div>
+
+    </div>
+
+    <div
+      class="payment-item"
+      [class.active]="selectedPayment === 'OVO'"
+      (click)="selectPayment('OVO')">
+
+      <span>OVO</span>
+
+      <div
+        class="radio"
+        [class.active]="selectedPayment === 'OVO'">
+      </div>
+
+    </div>
+
+    <div
+      class="payment-item"
+      [class.active]="selectedPayment === 'QRIS'"
+      (click)="selectPayment('QRIS')">
+
+      <span>QRIS</span>
+
+      <div
+        class="radio"
+        [class.active]="selectedPayment === 'QRIS'">
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="other-payment">
+    Pilih pembayaran lainnya →
+  </div>
+
+  <div class="total-section">
+
+    <span>TOTAL BAYAR</span>
+
+    <strong>Rp40.000</strong>
+
+  </div>
+
+  <div class="bottom-space"></div>
+
+</ion-content>
+
+<div class="bottom-button">
+
+  <button routerLink="/success">
+
+    SELESAIKAN PEMBAYARAN ANDA
+
+  </button>
+
+</div>
