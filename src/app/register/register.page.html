@@ -1,13 +1,56 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="dark" class="back-btn" routerLink="/onboarding" routerDirection="back">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding auth-content">
+  <div class="auth-header">
+    <div class="illustration-box short-illustration">
+      <img src="../../assets/images/register-illustration.png" alt="Register Illustration" />
+    </div>
+    <h2>FILL YOUR ENERGY!</h2>
+  </div>
+
+  <div class="form-container">
+    <ion-item lines="none" class="custom-input-item">
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="custom-input-item">
+      <ion-input type="email" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="custom-input-item">
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="custom-input-item">
+      <ion-input type="password" placeholder="Confirm password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" class="main-auth-btn">
+      Agree and Register
+    </ion-button>
+  </div>
+
+  <div class="divider-container">
+    <span class="divider-text">Or Login with</span>
+  </div>
+
+  <div class="social-container">
+    <ion-button fill="outline" class="social-btn">
+      <ion-icon name="logo-facebook" class="fb-icon"></ion-icon>
+    </ion-button>
+    <ion-button fill="outline" class="social-btn">
+      <ion-icon name="logo-google" class="google-icon"></ion-icon>
+    </ion-button>
+    <ion-button fill="outline" class="social-btn">
+      <ion-icon name="logo-apple" class="apple-icon"></ion-icon>
+    </ion-button>
+  </div>
 </ion-content>

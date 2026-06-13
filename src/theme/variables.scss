@@ -1,2 +1,228 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+/* ==========================================================================
+   SHUTTLE INTERFACE THEME (IMAGE_084701.PNG & IMAGE_07E911.PNG)
+   ========================================================================== */
+
+// Toolbar Transparan untuk halaman Form Login/Register
+ion-toolbar {
+  --background: #ffffff;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+// Tombol Kembali melengkung abu-abu halus
+.back-btn {
+  --background: #f2f2f2;
+  --border-radius: 10px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.auth-content {
+  --background: #ffffff;
+}
+
+// 1. GAYA UNTUK HALAMAN ONBOARDING (KONTEN HIJAU MELENGKUNG)
+.green-header {
+  background-color: var(--ion-color-success); // Warna hijau bawaan Ionic
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom-left-radius: 60% 30%; // Membuat lengkungan bawah
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+
+  .logo-container {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    .logo-icon {
+      font-size: 3rem;
+      color: var(--ion-color-success);
+    }
+  }
+
+  h1 {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    opacity: 0.9;
+  }
+}
+
+.content-container {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+  justify-content: center;
+
+  .button-container {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    ion-button {
+      --border-radius: 12px;
+      height: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+}
+
+// 2. GAYA UNTUK FORM LOGIN & REGISTER
+.auth-header {
+  text-align: center;
+  margin-bottom: 15px;
+
+  h2 {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: #111111;
+    margin-bottom: 15px;
+  }
+
+  .illustration-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-height: 160px;
+      object-fit: contain;
+    }
+
+    &.short-illustration img {
+      max-height: 125px; // Penyesuaian agar form Register tidak melebihi tinggi layar HP
+    }
+  }
+}
+
+// Custom Input Box (Kotak Abu-Abu Melengkung Lembut)
+.custom-input-item {
+  --background: #f7f7f9;
+  --border-radius: 12px;
+  --padding-start: 16px;
+  margin-bottom: 14px;
+  border: 1px solid #e1e1e6;
+
+  ion-input {
+    --placeholder-color: #999999;
+    font-size: 0.95rem;
+    color: #222222;
+  }
+}
+
+// Link Lupa Password (Teks Merah)
+.forgot-password-container {
+  text-align: right;
+  margin-bottom: 20px;
+
+  .forgot-btn {
+    color: #ff3b30;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
+// Tombol Submit Utama (Hijau Modern)
+.main-auth-btn {
+  --border-radius: 12px;
+  height: 52px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 5px;
+  box-shadow: 0 4px 12px rgba(0, 176, 80, 0.25);
+}
+
+// Pembatas Garis Tengah "Or Login with"
+.divider-container {
+  text-align: center;
+  position: relative;
+  margin: 25px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #eeeeee;
+    z-index: 1;
+  }
+
+  .divider-text {
+    background-color: #ffffff;
+    padding: 0 15px;
+    color: #8e8e93;
+    font-size: 0.85rem;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// Grid Tombol Sosial Media
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+
+  .social-btn {
+    --border-radius: 12px;
+    --border-color: #e5e5ea;
+    --border-width: 1px;
+    width: 75px;
+    height: 48px;
+    margin: 0;
+
+    ion-icon {
+      font-size: 1.4rem;
+    }
+
+    .fb-icon { color: #1877f2; }
+    .google-icon { color: #ea4335; }
+    .apple-icon { color: #000000; }
+  }
+}
+
+// Teks Link di bagian paling bawah
+.auth-footer-text {
+  text-align: center;
+  color: #333333;
+  font-size: 0.9rem;
+
+  .link-text {
+    color: #00b050;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}

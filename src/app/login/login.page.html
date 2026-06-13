@@ -1,13 +1,58 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="dark" class="back-btn" routerLink="/onboarding" routerDirection="back">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding auth-content">
+  <div class="auth-header">
+    <h2>LET'S PLAY</h2>
+    <div class="illustration-box">
+      <img src="../../assets/images/login-illustration.png" alt="Let's Play Illustration" />
+    </div>
+  </div>
+
+  <div class="form-container">
+    <ion-item lines="none" class="custom-input-item">
+      <ion-input type="email" placeholder="Enter your email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="custom-input-item">
+      <ion-input type="password" placeholder="Enter your password">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </ion-item>
+
+    <div class="forgot-password-container">
+      <a class="forgot-btn">Forgot Password?</a>
+    </div>
+
+    <ion-button expand="block" color="success" class="main-auth-btn">
+      Login
+    </ion-button>
+  </div>
+
+  <div class="divider-container">
+    <span class="divider-text">Or Login with</span>
+  </div>
+
+  <div class="social-container">
+    <ion-button fill="outline" class="social-btn">
+      <ion-icon name="logo-facebook" class="fb-icon"></ion-icon>
+    </ion-button>
+    <ion-button fill="outline" class="social-btn">
+      <ion-icon name="logo-google" class="google-icon"></ion-icon>
+    </ion-button>
+    <ion-button fill="outline" class="social-btn">
+      <ion-icon name="logo-apple" class="apple-icon"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="auth-footer-text">
+    Don't have an account? <a routerLink="/register" routerDirection="forward" class="link-text">Register Now</a>
+  </div>
 </ion-content>
