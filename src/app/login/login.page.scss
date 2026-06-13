@@ -100,11 +100,19 @@ ion-input {
   margin-bottom: 20px;
 }
 
-.forgot-password a {
-  color: #ff4d4f;
+.forgot-password a,
+.forgot-password span {
+  color: #a60000;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.forgot-password a:hover,
+.forgot-password span:hover {
+  opacity: 0.8;
 }
 
 .login-btn {
