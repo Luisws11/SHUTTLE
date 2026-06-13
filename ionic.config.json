@@ -1,0 +1,7 @@
+{
+  "name": "SHUTTLE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
