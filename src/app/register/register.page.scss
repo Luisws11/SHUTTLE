@@ -2,26 +2,24 @@ ion-content {
   --background: #f4f6f8;
 }
 
+// Kontainer utama untuk memusatkan konten di layar
 .auth-content {
-  max-width: 430px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  --padding-bottom: 20px;
 }
 
-.back-btn {
-  --background: #ffffff;
-  --border-radius: 12px;
-
-  width: 46px;
-  height: 46px;
+.auth-container {
+  width: 90%;
+  max-width: 430px; // Membatasi lebar agar rapi di desktop
+  margin: auto;
 }
 
 .auth-header {
   text-align: center;
   margin-top: 10px;
-}
-
-.illustration-box {
-  margin-bottom: 15px;
 }
 
 .illustration-box img {
@@ -30,7 +28,7 @@ ion-content {
 }
 
 .auth-header h2 {
-  font-size: 38px;
+  font-size: 32px; // Disesuaikan agar tidak terlalu besar
   font-weight: 800;
   color: #111;
   margin-top: 10px;
@@ -42,32 +40,19 @@ ion-content {
 
 .custom-input-item {
   --background: #ffffff;
-
   border-radius: 14px;
-
   margin-bottom: 15px;
-
   border: 1px solid #ececec;
-
   --padding-start: 12px;
-}
-
-ion-input {
-  --padding-top: 16px;
-  --padding-bottom: 16px;
 }
 
 .main-auth-btn {
   --background: #31d158;
   --border-radius: 16px;
-
   height: 58px;
-
   font-size: 18px;
   font-weight: 700;
-
   margin-top: 15px;
-
   box-shadow: 0 10px 20px rgba(49, 209, 88, 0.25);
 }
 
@@ -80,29 +65,19 @@ ion-input {
 .divider-container::before,
 .divider-container::after {
   content: '';
-
   position: absolute;
-
   top: 50%;
-
   width: 35%;
   height: 1px;
-
   background: #d8d8d8;
 }
 
-.divider-container::before {
-  left: 0;
-}
-
-.divider-container::after {
-  right: 0;
-}
+.divider-container::before { left: 0; }
+.divider-container::after { right: 0; }
 
 .divider-text {
   background: #f4f6f8;
   padding: 0 12px;
-
   color: #888;
   font-size: 14px;
 }
@@ -116,15 +91,7 @@ ion-input {
 .social-btn {
   width: 70px;
   height: 55px;
-
   --border-radius: 16px;
   --border-color: #e5e5e5;
-
   --background: #ffffff;
-}
-
-.social-btn img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
 }
