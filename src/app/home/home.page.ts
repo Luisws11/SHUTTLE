@@ -1,20 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { 
+  IonHeader, IonToolbar, IonContent, IonIcon, IonGrid, IonRow, IonCol,
+  IonTabs, IonTabBar, IonTabButton, IonLabel 
+} from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import { 
+  searchOutline, personOutline, notificationsOutline, locationOutline, 
+  star, homeOutline, tennisballOutline, receiptOutline 
+} from 'ionicons/icons';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [
+    CommonModule, IonHeader, IonToolbar, IonContent, IonIcon, IonGrid, IonRow, IonCol,
+    IonTabs, IonTabBar, IonTabButton, IonLabel
+  ],
 })
-export class HomePage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class HomePage {
+  constructor() {
+    addIcons({
+      'search-outline': searchOutline,
+      'person-outline': personOutline,
+      'notifications-outline': notificationsOutline,
+      'location-outline': locationOutline,
+      'star': star,
+      'home-outline': homeOutline,
+      'tennisball-outline': tennisballOutline,
+      'receipt-outline': receiptOutline
+    });
   }
-
 }

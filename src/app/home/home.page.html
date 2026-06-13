@@ -1,13 +1,62 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <div class="top-nav">
+      <div class="search-box">
+        <ion-icon name="search-outline"></ion-icon>
+        <input type="text" placeholder="Cari Lapangan & Fasilitas" />
+      </div>
+      <div class="icon-circle"><ion-icon name="person-outline"></ion-icon></div>
+      <div class="icon-circle"><ion-icon name="notifications-outline"></ion-icon></div>
+    </div>
+    <div class="location-bar">
+      <ion-icon name="location-outline"></ion-icon>
+      <span>Karawang Barat, Indonesia</span>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="banner-container">
+    <img src="https://colorbond.id/files/Artikel/Artikel%202024/A%20Sports%20Building%20with%20Modern%20Design.jpg" class="banner-img" />
+  </div>
+
+  <div class="hero-banner">
+    <div class="hero-content">
+      <h2>Pesan Lapangan Bulu Tangkis Sekarang!</h2>
+      <p>Solusi cepat dan mudah untuk pemesanan online.</p>
+      <button class="btn-jelajahi">Jelajahi</button>
+    </div>
+  </div>
+
+  <div class="recommendation-header">
+    <h3>Rekomendasi GOR & Lapangan</h3>
+  </div>
+
+  <ion-grid class="court-grid">
+    <ion-row>
+      <ion-col size="6" *ngFor="let i of [1,2,3,4]">
+        <div class="court-card">
+          <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=400" class="court-img"/>
+          <div class="card-body">
+            <h4 class="court-title">GOR Pelangi</h4>
+            <div class="info-row">
+              <ion-icon name="location-outline"></ion-icon> <span>Karawang Barat</span>
+            </div>
+            <div class="info-row rating">
+              <ion-icon name="star"></ion-icon> <span>4.8/5</span>
+            </div>
+            <div class="price-tag">Rp 45.000 <span>/ Jam</span></div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="beranda"><ion-icon name="home-outline"></ion-icon><ion-label>Beranda</ion-label></ion-tab-button>
+    <ion-tab-button tab="lapangan"><ion-icon name="tennisball-outline"></ion-icon><ion-label>Lapangan</ion-label></ion-tab-button>
+    <ion-tab-button tab="pesanan"><ion-icon name="receipt-outline"></ion-icon><ion-label>Pesanan</ion-label></ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
