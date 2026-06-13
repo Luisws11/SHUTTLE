@@ -33,10 +33,11 @@ export const routes: Routes = [
     loadComponent: () => import('./forgot-password/forgot-password.page').then(m => m.ForgotPasswordPage)
   },
 
-  {
-    path: 'otp',
-    loadComponent: () => import('./otp/otp.page').then(m => m.OtpPage)
-  },
+ {
+  path: 'otp',
+  loadComponent: () =>
+    import('./otp/otp.page').then(m => m.OtpPage),
+},
 
   {
     path: 'reset-password',

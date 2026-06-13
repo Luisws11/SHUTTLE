@@ -1,47 +1,192 @@
-:root { 
-  --primary-green: #009245; 
-  --light-green: #e8f5e9;
+:root {
+  --primary-green: #009245;
 }
 
-ion-content { --overflow: auto; background-color: #f9fff9; }
-
-/* Header & Nav */
-.top-nav { display: flex; align-items: center; gap: 8px; padding: 10px;
-  .search-box { flex: 1; display: flex; align-items: center; background: #ececec; padding: 8px 12px; border-radius: 20px;
-    input { background: none; border: none; margin-left: 8px; width: 100%; outline: none; }
-  }
-  .icon-circle { padding: 8px; background: #ececec; border-radius: 50%; display: flex; color: var(--primary-green); }
+ion-content {
+  --background: #ffffff;
 }
 
-.location-bar { display: flex; align-items: center; padding: 0 15px 10px; color: var(--primary-green); font-size: 13px; font-weight: 600; }
-
-/* Banner */
-.banner-container { padding: 15px;
-  .banner-img { width: 100%; height: 180px; object-fit: cover; border-radius: 20px; filter: brightness(0.85); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
 }
 
-/* Hero */
-.hero-banner { margin: 0 15px 15px; padding: 25px; background: linear-gradient(135deg, var(--primary-green), #00662f); border-radius: 20px; color: white;
-  h2 { font-size: 20px; margin: 0 0 5px; }
-  p { font-size: 13px; opacity: 0.9; }
-  .btn-jelajahi { background: white; color: var(--primary-green); border: none; padding: 10px 25px; border-radius: 12px; font-weight: bold; margin-top: 15px; }
+.search-box {
+  flex: 1;
+  height: 36px;
+  background: #ededed;
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
 }
 
-/* List */
-.recommendation-header { padding: 0 15px 10px; 
-  h3 { font-size: 17px; margin: 0; color: #333; border-left: 4px solid var(--primary-green); padding-left: 10px; }
+.search-box input {
+  border: none;
+  background: transparent;
+  margin-left: 8px;
+  width: 100%;
+  outline: none;
+  font-size: 12px;
 }
 
-.court-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin: 6px;
-  .court-img { width: 100%; height: 100px; object-fit: cover; }
-  .card-body { padding: 12px; }
-  .court-title { font-size: 14px; font-weight: 800; margin: 0 0 5px; color: #333; }
-  .info-row { display: flex; align-items: center; font-size: 11px; color: #666; margin-bottom: 3px;
-    ion-icon { color: var(--primary-green); margin-right: 4px; }
-  }
-  .price-tag { color: var(--primary-green); font-weight: 900; font-size: 13px; margin-top: 5px;
-    span { font-size: 10px; color: #888; }
-  }
+.top-icon {
+  font-size: 22px;
+  color: var(--primary-green);
 }
 
-ion-tab-bar { --color-selected: var(--primary-green); border-top: 1px solid #ddd; }
+.location-bar {
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.location-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hero-banner {
+  position: relative;
+  height: 180px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,.45);
+
+  color: white;
+
+  padding: 25px 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-overlay h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  width: 75%;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.recommendation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+}
+
+.recommendation-header h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.recommendation-header small {
+  color: #666;
+}
+
+.shuttle-logo {
+  color: var(--primary-green);
+  font-weight: 800;
+  font-style: italic;
+}
+
+.court-list {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+
+  padding: 0 15px 90px;
+}
+
+.court-card {
+  background: white;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  border: 1px solid #e8e8e8;
+}
+
+.court-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-content h4 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  font-size: 11px;
+  color: #666;
+
+  margin-bottom: 4px;
+}
+
+.rating ion-icon {
+  color: orange;
+}
+
+.price {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+ion-tab-bar {
+  height: 65px;
+  border-top: 1px solid #e8e8e8;
+}
+
+ion-tab-button {
+  font-size: 11px;
+}
+
+ion-tab-button.tab-selected {
+  color: var(--primary-green);
+}

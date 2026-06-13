@@ -1,13 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>otp</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">otp</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <div class="otp-container">
+
+    <div class="back-btn">
+      <ion-button fill="clear" routerLink="/forgot-password">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="otp-content">
+
+      <h1>OTP Verification</h1>
+
+      <p>
+        Enter the verification code we just sent on your email address.
+      </p>
+
+      <div class="otp-inputs">
+        <input class="otp-box" type="text" maxlength="1">
+        <input class="otp-box" type="text" maxlength="1">
+        <input class="otp-box" type="text" maxlength="1">
+        <input class="otp-box" type="text" maxlength="1">
+      </div>
+
+      <ion-button
+        expand="block"
+        class="verify-btn"
+        routerLink="/reset-password">
+
+        Verify
+
+      </ion-button>
+
+    </div>
+
+  </div>
+
 </ion-content>

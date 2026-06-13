@@ -1,62 +1,122 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
+
     <div class="top-nav">
+
       <div class="search-box">
         <ion-icon name="search-outline"></ion-icon>
-        <input type="text" placeholder="Cari Lapangan & Fasilitas" />
+        <input type="text" placeholder="Cari di SHUTTLE">
       </div>
-      <div class="icon-circle"><ion-icon name="person-outline"></ion-icon></div>
-      <div class="icon-circle"><ion-icon name="notifications-outline"></ion-icon></div>
+
+      <ion-icon class="top-icon" name="notifications-outline"></ion-icon>
+      <ion-icon class="top-icon" name="person-circle"></ion-icon>
+
     </div>
+
     <div class="location-bar">
-      <ion-icon name="location-outline"></ion-icon>
-      <span>Karawang Barat, Indonesia</span>
+
+      <div class="location-left">
+        <ion-icon name="location"></ion-icon>
+        <span>KARAWANG BARAT</span>
+      </div>
+
+      <ion-icon name="chevron-down-outline"></ion-icon>
+
     </div>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <div class="banner-container">
-    <img src="https://colorbond.id/files/Artikel/Artikel%202024/A%20Sports%20Building%20with%20Modern%20Design.jpg" class="banner-img" />
-  </div>
+<ion-content>
 
   <div class="hero-banner">
-    <div class="hero-content">
-      <h2>Pesan Lapangan Bulu Tangkis Sekarang!</h2>
-      <p>Solusi cepat dan mudah untuk pemesanan online.</p>
-      <button class="btn-jelajahi">Jelajahi</button>
+
+    <img
+      src="https://images.unsplash.com/photo-1613918431703-aa50889c0f7d?q=80&w=1200"
+      class="hero-image">
+
+    <div class="hero-overlay">
+
+      <h2>
+        Temukan dan Pesan Lapangan
+        Yang Kamu Inginkan
+      </h2>
+
+      <p>
+        Solusi cepat dan mudah digunakan
+        untuk pemesanan online dan
+        pengelolaan fasilitas.
+      </p>
+
     </div>
+
   </div>
 
   <div class="recommendation-header">
-    <h3>Rekomendasi GOR & Lapangan</h3>
+
+    <div>
+      <h3>Rekomendasi Lapangan</h3>
+      <small>
+        Temukan Yang Terbaik Untuk Bermain
+      </small>
+    </div>
+
+    <div class="shuttle-logo">
+      SHUTTLE
+    </div>
+
   </div>
 
-  <ion-grid class="court-grid">
-    <ion-row>
-      <ion-col size="6" *ngFor="let i of [1,2,3,4]">
-        <div class="court-card">
-          <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=400" class="court-img"/>
-          <div class="card-body">
-            <h4 class="court-title">GOR Pelangi</h4>
-            <div class="info-row">
-              <ion-icon name="location-outline"></ion-icon> <span>Karawang Barat</span>
-            </div>
-            <div class="info-row rating">
-              <ion-icon name="star"></ion-icon> <span>4.8/5</span>
-            </div>
-            <div class="price-tag">Rp 45.000 <span>/ Jam</span></div>
-          </div>
+  <div class="court-list">
+
+    <div class="court-card" *ngFor="let court of courts">
+
+      <img [src]="court.image">
+
+      <div class="card-content">
+
+        <h4>{{court.name}}</h4>
+
+        <div class="info-row">
+          <ion-icon name="location"></ion-icon>
+          {{court.location}}
         </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+
+        <div class="info-row rating">
+          <ion-icon name="star"></ion-icon>
+          4.9/5.0
+        </div>
+
+        <div class="price">
+          Mulai Rp {{court.price}}/Jam
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </ion-content>
 
 <ion-tabs>
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="beranda"><ion-icon name="home-outline"></ion-icon><ion-label>Beranda</ion-label></ion-tab-button>
-    <ion-tab-button tab="lapangan"><ion-icon name="tennisball-outline"></ion-icon><ion-label>Lapangan</ion-label></ion-tab-button>
-    <ion-tab-button tab="pesanan"><ion-icon name="receipt-outline"></ion-icon><ion-label>Pesanan</ion-label></ion-tab-button>
+
+    <ion-tab-button tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Beranda</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="lapangan">
+      <ion-icon name="tennisball-outline"></ion-icon>
+      <ion-label>Lapangan</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="pesanan">
+      <ion-icon name="receipt-outline"></ion-icon>
+      <ion-label>Pesanan</ion-label>
+    </ion-tab-button>
+
   </ion-tab-bar>
 </ion-tabs>
+```

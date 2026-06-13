@@ -1,0 +1,83 @@
+ion-content {
+  --background: #ffffff;
+}
+
+.otp-container {
+  max-width: 390px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.back-btn {
+  margin-top: 10px;
+}
+
+.back-btn ion-button {
+  --background: #ececec;
+  --border-radius: 12px;
+  width: 38px;
+  height: 38px;
+}
+
+.otp-content {
+  margin-top: 70px;
+}
+
+.otp-content h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.otp-content p {
+  font-size: 13px;
+  color: #9aa0a6;
+  line-height: 1.5;
+  margin-bottom: 35px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 35px 0;
+}
+
+.otp-inputs input {
+  width: 52px;
+  height: 52px;
+
+  border: 1.8px solid #8adceb;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.otp-inputs input:focus {
+  border-color: #009245;
+  box-shadow: 0 0 0 3px rgba(0, 146, 69, 0.15);
+}
+
+.verify-btn {
+  --background: #009245;
+  --color: #ffffff;
+  --border-radius: 8px;
+
+  height: 48px;
+
+  margin-top: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+}
