@@ -70,7 +70,12 @@ export const routes: Routes = [
     import('./detail-lapangan/detail-lapangan.page')
       .then(m => m.DetailLapanganPage)
   },
-  
+  {
+  path: 'booking-lapangan',
+  loadComponent: () =>
+    import('./booking-lapangan/booking-lapangan.page')
+      .then(m => m.BookingLapanganPage)
+  },
   {
     path: '**',
     redirectTo: 'onboarding'
@@ -82,7 +87,12 @@ export const routes: Routes = [
   {
     path: 'detail-lapangan',
     loadComponent: () => import('./detail-lapangan/detail-lapangan.page').then( m => m.DetailLapanganPage)
+  },
+  {
+    path: 'booking-lapangan',
+    loadComponent: () => import('./booking-lapangan/booking-lapangan.page').then( m => m.BookingLapanganPage)
   }
+
 
 
 ];

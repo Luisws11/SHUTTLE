@@ -1,0 +1,171 @@
+ion-content {
+  --background: #f5f5f5;
+}
+
+/* HERO */
+.hero-section {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.back-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 34px;
+  color: white;
+}
+
+/* HEADER */
+.court-header {
+  background: white;
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.court-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.rating {
+  color: #f4b400;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* TAB */
+.tab-menu {
+  display: flex;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.tab.active {
+  color: #009245;
+  border-bottom: 2px solid #009245;
+}
+
+/* DATE */
+.date-container {
+  display: flex;
+  gap: 8px;
+
+  overflow-x: auto;
+
+  padding: 15px;
+  background: white;
+}
+
+.date-card {
+  min-width: 70px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  text-align: center;
+
+  padding: 10px 5px;
+
+  background: white;
+}
+
+.date-card span {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.date-card small {
+  font-size: 11px;
+}
+
+.date-card.active {
+  background: #009245;
+  color: white;
+  border-color: #009245;
+}
+
+/* COURT SECTION */
+.court-section {
+  background: white;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.court-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* TIME GRID */
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.time-grid button {
+  height: 35px;
+
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+
+  background: white;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #333;
+}
+
+/* BUTTON */
+.bottom-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 10px;
+
+  background: white;
+
+  box-shadow: 0 -2px 10px rgba(0,0,0,.08);
+}
+
+.bottom-button button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #009245;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+}
