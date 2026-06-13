@@ -50,25 +50,25 @@ export class HomePage {
       name: 'GOR Lapangan Dewi',
       location: 'Karawang Barat',
       price: '40.000',
-      image: 'https://images.unsplash.com/photo-1613918431703-aa50889c0f7d?q=80&w=1200'
+      image:'assets/images/home/lapangan1.png'
     },
     {
       name: 'GOR Dagus',
       location: 'Karawang Timur',
       price: '35.000',
-      image: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=1200'
+      image:'assets/images/home/lapangan2.png'
     },
     {
       name: 'GOR Lapangan Dewi',
       location: 'Karawang Barat',
       price: '40.000',
-      image: 'https://images.unsplash.com/photo-1613918431703-aa50889c0f7d?q=80&w=1200'
+      image:'assets/images/home/lapangan3.png'
     },
     {
       name: 'GOR Dagus',
       location: 'Karawang Timur',
       price: '35.000',
-      image: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=1200'
+      image:'assets/images/home/lapangan4.png'
     }
   ];
 
