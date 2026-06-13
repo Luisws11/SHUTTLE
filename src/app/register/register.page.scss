@@ -1,0 +1,130 @@
+ion-content {
+  --background: #f4f6f8;
+}
+
+.auth-content {
+  max-width: 430px;
+  margin: auto;
+}
+
+.back-btn {
+  --background: #ffffff;
+  --border-radius: 12px;
+
+  width: 46px;
+  height: 46px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.illustration-box {
+  margin-bottom: 15px;
+}
+
+.illustration-box img {
+  width: 180px;
+  max-width: 100%;
+}
+
+.auth-header h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #111;
+  margin-top: 10px;
+}
+
+.form-container {
+  margin-top: 25px;
+}
+
+.custom-input-item {
+  --background: #ffffff;
+
+  border-radius: 14px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #ececec;
+
+  --padding-start: 12px;
+}
+
+ion-input {
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+}
+
+.main-auth-btn {
+  --background: #31d158;
+  --border-radius: 16px;
+
+  height: 58px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  margin-top: 15px;
+
+  box-shadow: 0 10px 20px rgba(49, 209, 88, 0.25);
+}
+
+.divider-container {
+  position: relative;
+  text-align: center;
+  margin: 35px 0;
+}
+
+.divider-container::before,
+.divider-container::after {
+  content: '';
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 35%;
+  height: 1px;
+
+  background: #d8d8d8;
+}
+
+.divider-container::before {
+  left: 0;
+}
+
+.divider-container::after {
+  right: 0;
+}
+
+.divider-text {
+  background: #f4f6f8;
+  padding: 0 12px;
+
+  color: #888;
+  font-size: 14px;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-btn {
+  width: 70px;
+  height: 55px;
+
+  --border-radius: 16px;
+  --border-color: #e5e5e5;
+
+  --background: #ffffff;
+}
+
+.social-btn img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
