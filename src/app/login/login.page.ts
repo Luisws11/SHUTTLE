@@ -1,9 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { 
-  IonContent, IonHeader, IonToolbar, IonButtons, IonButton, 
-  IonIcon, IonItem, IonInput, IonInputPasswordToggle 
+import {
+  IonContent,
+  IonButton,
+  IonIcon,
+  IonItem,
+  IonInput,
+  IonInputPasswordToggle
 } from '@ionic/angular/standalone';
+
+import { addIcons } from 'ionicons';
+import {
+  chevronBackOutline,
+  trophyOutline,
+  mailOutline,
+  lockClosedOutline
+} from 'ionicons/icons';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +23,24 @@ import {
   styleUrls: ['./login.page.scss'],
   standalone: true,
   imports: [
-    IonContent, IonHeader, IonToolbar, IonButtons, IonButton, 
-    IonIcon, IonItem, IonInput, IonInputPasswordToggle, RouterModule
+    IonContent,
+    IonButton,
+    IonIcon,
+    IonItem,
+    IonInput,
+    IonInputPasswordToggle,
+    RouterModule
   ]
 })
 export class LoginPage {
-  constructor() {}
+
+  constructor() {
+    addIcons({
+      chevronBackOutline,
+      trophyOutline,
+      mailOutline,
+      lockClosedOutline
+    });
+  }
+
 }

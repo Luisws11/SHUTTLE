@@ -1,58 +1,86 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button color="dark" class="back-btn" routerLink="/onboarding" routerDirection="back">
-        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+<ion-content [fullscreen]="true">
+
+  <div class="login-wrapper">
+
+    <div class="back-btn">
+      <ion-button fill="clear" routerLink="/onboarding">
+        <ion-icon name="chevron-back-outline"></ion-icon>
       </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content class="ion-padding auth-content">
-  <div class="auth-header">
-    <h2>LET'S PLAY</h2>
-    <div class="illustration-box">
-      <img src="../../assets/images/login-illustration.png" alt="Let's Play Illustration" />
-    </div>
-  </div>
-
-  <div class="form-container">
-    <ion-item lines="none" class="custom-input-item">
-      <ion-input type="email" placeholder="Enter your email"></ion-input>
-    </ion-item>
-
-    <ion-item lines="none" class="custom-input-item">
-      <ion-input type="password" placeholder="Enter your password">
-        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-      </ion-input>
-    </ion-item>
-
-    <div class="forgot-password-container">
-      <a class="forgot-btn">Forgot Password?</a>
     </div>
 
-    <ion-button expand="block" color="success" class="main-auth-btn">
-      Login
-    </ion-button>
+    <div class="header">
+
+      <div class="logo-circle">
+        <ion-icon name="trophy-outline"></ion-icon>
+      </div>
+
+      <h1>LET'S PLAY</h1>
+      <p>Welcome Back to SHUTTLE</p>
+
+    </div>
+
+    <div class="form-card">
+
+      <ion-item lines="none">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-input
+          type="email"
+          placeholder="Enter your email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+
+        <ion-input
+          type="password"
+          placeholder="Enter your password">
+        </ion-input>
+
+        <ion-input-password-toggle slot="end">
+        </ion-input-password-toggle>
+      </ion-item>
+
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <ion-button expand="block" class="login-btn">
+        Login
+      </ion-button>
+
+      <div class="divider">
+        <span>Or continue with</span>
+      </div>
+
+      <div class="social-login">
+
+        <div class="social-btn">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+        </div>
+
+        <div class="social-btn">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/281/281764.png">
+        </div>
+
+        <div class="social-btn">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/0/747.png">
+        </div>
+
+      </div>
+
+      <div class="register">
+        Don't have an account?
+        <span routerLink="/register">
+          Register Now
+        </span>
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="divider-container">
-    <span class="divider-text">Or Login with</span>
-  </div>
-
-  <div class="social-container">
-    <ion-button fill="outline" class="social-btn">
-      <ion-icon name="logo-facebook" class="fb-icon"></ion-icon>
-    </ion-button>
-    <ion-button fill="outline" class="social-btn">
-      <ion-icon name="logo-google" class="google-icon"></ion-icon>
-    </ion-button>
-    <ion-button fill="outline" class="social-btn">
-      <ion-icon name="logo-apple" class="apple-icon"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div class="auth-footer-text">
-    Don't have an account? <a routerLink="/register" routerDirection="forward" class="link-text">Register Now</a>
-  </div>
 </ion-content>

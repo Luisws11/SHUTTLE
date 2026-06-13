@@ -1,20 +1,29 @@
 <ion-content [fullscreen]="true">
-  <div class="green-header">
-    <div class="logo-container">
-      <ion-icon name="trophy-outline" class="logo-icon"></ion-icon>
+
+  <div class="top-section">
+    <div class="logo-circle">
+      <ion-icon name="american-football-outline"></ion-icon>
     </div>
+
     <h1>SHUTTLE</h1>
     <p>Smash Your Racket</p>
   </div>
 
-  <div class="content-container">
-    <div class="button-container">
-      <ion-button expand="block" color="success" routerLink="/login" routerDirection="forward">
-        Login
-      </ion-button>
-      <ion-button expand="block" fill="outline" color="success" routerLink="/register" routerDirection="forward">
-        Register
-      </ion-button>
-    </div>
+  <div class="bottom-section">
+    <ion-button
+      expand="block"
+      color="success"
+      routerLink="/login">
+      Login
+    </ion-button>
+
+    <ion-button
+      expand="block"
+      fill="outline"
+      color="success"
+      routerLink="/register">
+      Register
+    </ion-button>
   </div>
+
 </ion-content>
