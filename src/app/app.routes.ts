@@ -4,52 +4,73 @@ export const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'splash',
+    redirectTo: 'onboarding',
     pathMatch: 'full'
   },
 
   {
-    path: 'splash',
-    loadComponent: () => import('./splash/splash.page').then(m => m.SplashPage)
-  },
-
-  {
-    path: 'welcome',
-    loadComponent: () => import('./welcome/welcome.page').then(m => m.WelcomePage)
+    path: 'onboarding',
+    loadComponent: () =>
+      import('./onboarding/onboarding.page')
+        .then(m => m.OnboardingPage)
   },
 
   {
     path: 'login',
-    loadComponent: () => import('./login/login.page').then(m => m.LoginPage)
+    loadComponent: () =>
+      import('./login/login.page')
+        .then(m => m.LoginPage)
   },
 
   {
     path: 'register',
-    loadComponent: () => import('./register/register.page').then(m => m.RegisterPage)
+    loadComponent: () =>
+      import('./register/register.page')
+        .then(m => m.RegisterPage)
   },
 
   {
     path: 'forgot-password',
-    loadComponent: () => import('./forgot-password/forgot-password.page').then(m => m.ForgotPasswordPage)
+    loadComponent: () =>
+      import('./forgot-password/forgot-password.page')
+        .then(m => m.ForgotPasswordPage)
   },
 
- {
-  path: 'otp',
-  loadComponent: () =>
-    import('./otp/otp.page').then(m => m.OtpPage),
-},
+  {
+    path: 'otp',
+    loadComponent: () =>
+      import('./otp/otp.page')
+        .then(m => m.OtpPage)
+  },
 
   {
     path: 'reset-password',
-    loadComponent: () => import('./reset-password/reset-password.page').then(m => m.ResetPasswordPage)
+    loadComponent: () =>
+      import('./reset-password/reset-password.page')
+        .then(m => m.ResetPasswordPage)
+  },
+
+  {
+    path: 'success',
+    loadComponent: () =>
+      import('./success/success.page')
+        .then(m => m.SuccessPage)
   },
 
   {
     path: 'home',
-    loadComponent: () => import('./home/home.page').then(m => m.HomePage)
+    loadComponent: () =>
+      import('./home/home.page')
+        .then(m => m.HomePage)
   },
+
   {
-    path: 'onboarding',
-    loadComponent: () => import('./onboarding/onboarding.page').then( m => m.OnboardingPage)
-  },
+    path: '**',
+    redirectTo: 'onboarding'
+  },  {
+    path: 'success',
+    loadComponent: () => import('./success/success.page').then( m => m.SuccessPage)
+  }
+
+
 ];
