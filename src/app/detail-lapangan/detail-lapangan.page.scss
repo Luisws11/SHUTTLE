@@ -1,0 +1,190 @@
+ion-content {
+  --background: #f8f8f8;
+}
+
+/* HERO */
+.hero-section {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.back-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 34px;
+  color: white;
+  z-index: 10;
+}
+
+/* HEADER */
+.court-header {
+  background: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 20px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.court-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+.rating {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f4b400;
+}
+
+.rating span {
+  margin-right: 5px;
+}
+
+/* TAB */
+.tab-menu {
+  display: flex;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+}
+
+.tab.active {
+  color: #009245;
+  border-bottom: 2px solid #009245;
+}
+
+/* SECTION */
+.section {
+  background: white;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.section h3 {
+  margin: 0 0 15px;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.section p {
+  margin: 0;
+  color: #444;
+}
+
+/* LOKASI */
+.location-box {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.location-box ion-icon {
+  font-size: 22px;
+  color: black;
+}
+
+.location-box span {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* JADWAL */
+.schedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 40px;
+
+  color: #333;
+}
+
+/* FOTO */
+.gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 95px;
+  height: 70px;
+
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* RATING */
+.score-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  font-size: 18px;
+}
+
+.score-value {
+  font-size: 34px;
+  font-weight: 700;
+  color: #f4b400;
+}
+
+.rating-badge {
+  background: #009245;
+  color: white;
+
+  padding: 8px 18px;
+  border-radius: 10px;
+
+  font-weight: 700;
+}
+
+/* BUTTON */
+.bottom-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: white;
+  padding: 10px;
+
+  box-shadow: 0 -2px 10px rgba(0,0,0,.08);
+}
+
+.bottom-button button {
+  width: 100%;
+  height: 52px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #009245;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+}

@@ -65,11 +65,23 @@ export const routes: Routes = [
   },
 
   {
+  path: 'detail-lapangan',
+  loadComponent: () =>
+    import('./detail-lapangan/detail-lapangan.page')
+      .then(m => m.DetailLapanganPage)
+  },
+  
+  {
     path: '**',
     redirectTo: 'onboarding'
-  },  {
+  },
+  {
     path: 'success',
     loadComponent: () => import('./success/success.page').then( m => m.SuccessPage)
+  },
+  {
+    path: 'detail-lapangan',
+    loadComponent: () => import('./detail-lapangan/detail-lapangan.page').then( m => m.DetailLapanganPage)
   }
 
 

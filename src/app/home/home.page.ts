@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 import {
   IonHeader,
@@ -46,33 +47,21 @@ import {
 export class HomePage {
 
   courts = [
-    {
-      name: 'GOR Lapangan Dewi',
-      location: 'Karawang Barat',
-      price: '40.000',
-      image:'assets/images/home/lapangan1.png'
-    },
-    {
-      name: 'GOR Dagus',
-      location: 'Karawang Timur',
-      price: '35.000',
-      image:'assets/images/home/lapangan2.png'
-    },
-    {
-      name: 'GOR Lapangan Dewi',
-      location: 'Karawang Barat',
-      price: '40.000',
-      image:'assets/images/home/lapangan3.png'
-    },
-    {
-      name: 'GOR Dagus',
-      location: 'Karawang Timur',
-      price: '35.000',
-      image:'assets/images/home/lapangan4.png'
-    }
-  ];
+  {
+    name: 'GOR Dewi',
+    location: 'Karawang Barat',
+    price: '40000',
+    image: 'assets/images/home/banner2.png'
+  },
+  {
+    name: 'GOR Dagus',
+    location: 'Karawang Timur',
+    price: '35000',
+    image: 'assets/images/home/banner2.png'
+  }
+];
 
-  constructor() {
+  constructor(private router: Router) {
     addIcons({
       searchOutline,
       notificationsOutline,
@@ -84,5 +73,16 @@ export class HomePage {
       tennisballOutline,
       receiptOutline
     });
+  }
+
+  openCourt(court: any): void {
+    this.router.navigate(
+      ['/detail-lapangan'],
+      {
+        state: {
+          court
+        }
+      }
+    );
   }
 }

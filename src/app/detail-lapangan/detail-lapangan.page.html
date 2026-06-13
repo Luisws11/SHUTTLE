@@ -1,0 +1,132 @@
+<ion-content [fullscreen]="true">
+
+  <!-- Hero Image -->
+  <div class="hero-section">
+
+    <img
+      [src]="court?.image || 'assets/picture/gor-dewi.jpg'"
+      class="hero-image">
+
+    <div class="back-button">
+      <ion-icon name="arrow-back-circle-outline"></ion-icon>
+    </div>
+
+  </div>
+
+  <!-- Header -->
+  <div class="court-header">
+
+    <h2>{{ court?.name || 'GOR Dewi' }}</h2>
+
+    <div class="rating">
+      <span>4.9</span> ⭐⭐⭐⭐⭐
+    </div>
+
+  </div>
+
+  <!-- Tabs -->
+  <div class="tab-menu">
+
+    <div class="tab active">
+      INFORMASI
+    </div>
+
+    <div class="tab">
+      JADWAL
+    </div>
+
+  </div>
+
+  <!-- Lokasi -->
+  <div class="section">
+
+    <h3>Lokasi</h3>
+
+    <div class="location-box">
+
+      <ion-icon name="location"></ion-icon>
+
+      <span>
+        Jl. Puri Tlk. Jambe No.21,
+        Telukjambe Timur,
+        Karawang,
+        Jawa Barat 41361
+      </span>
+
+    </div>
+
+  </div>
+
+  <!-- Jam Operasional -->
+  <div class="section">
+
+    <h3>Jam Operasional :</h3>
+
+    <div class="schedule">
+
+      <div>Senin</div><div>08.00 - 00.00</div>
+      <div>Selasa</div><div>08.00 - 00.00</div>
+      <div>Rabu</div><div>08.00 - 00.00</div>
+      <div>Kamis</div><div>08.00 - 00.00</div>
+      <div>Jumat</div><div>08.00 - 00.00</div>
+      <div>Sabtu</div><div>08.00 - 00.00</div>
+      <div>Minggu</div><div>08.00 - 00.00</div>
+
+    </div>
+
+  </div>
+
+  <!-- Fasilitas -->
+  <div class="section">
+
+    <h3>Fasilitas :</h3>
+
+    <p>10 Lapangan : A - J</p>
+
+  </div>
+
+  <!-- Gallery -->
+  <div class="section">
+
+    <h3>Foto</h3>
+
+    <div class="gallery">
+
+      <img src="assets/images/home/lapangan1">
+      <img src="assets/images/home/lapangan2">
+      <img src="assets/images/home/lapangan3">
+
+    </div>
+
+  </div>
+
+  <!-- Rating -->
+  <div class="section">
+
+    <h3>Skor Lapang</h3>
+
+    <div class="score-container">
+
+      <div class="stars">
+        ⭐⭐⭐⭐⭐
+      </div>
+
+      <div class="score-value">
+        4.9
+      </div>
+
+      <div class="rating-badge">
+        RATING
+      </div>
+
+    </div>
+
+  </div>
+
+  <div style="height:80px"></div>
+
+</ion-content>
+
+<div class="bottom-button">
+  <button>MAIN YUK!</button>
+</div>

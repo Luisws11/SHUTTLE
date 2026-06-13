@@ -69,7 +69,10 @@
 
   <div class="court-list">
 
-    <div class="court-card" *ngFor="let court of courts">
+    <div
+      class="court-card"
+      *ngFor="let court of courts"
+      (click)="openCourt(court)">
 
       <img [src]="court.image">
 
