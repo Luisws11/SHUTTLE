@@ -1,15 +1,25 @@
 <ion-header class="ion-no-border">
+
   <ion-toolbar>
 
     <div class="top-nav">
 
-      <div class="search-box">
-        <ion-icon name="search-outline"></ion-icon>
-        <input type="text" placeholder="Cari di SHUTTLE">
-      </div>
+     <div class="search-box">
+  <ion-icon name="search-outline"></ion-icon>
+  <input
+    type="text"
+    placeholder="Cari di SHUTTLE">
+</div>
 
-      <ion-icon class="top-icon" name="notifications-outline"></ion-icon>
-      <ion-icon class="top-icon" name="person-circle"></ion-icon>
+<ion-icon
+  class="top-icon"
+  name="notifications-outline">
+</ion-icon>
+
+<ion-icon
+  class="top-icon"
+  name="person-circle">
+</ion-icon>
 
     </div>
 
@@ -20,15 +30,19 @@
         <span>KARAWANG BARAT</span>
       </div>
 
-      <ion-icon name="chevron-down-outline"></ion-icon>
+      <ion-icon
+        name="chevron-down-outline">
+      </ion-icon>
 
     </div>
 
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
+  <!-- HERO -->
   <div class="hero-banner">
 
     <img
@@ -52,21 +66,32 @@
 
   </div>
 
+  <!-- HEADER REKOMENDASI -->
   <div class="recommendation-header">
 
-    <div>
+    <div class="recommendation-title">
+
       <h3>Rekomendasi Lapangan</h3>
+
       <small>
         Temukan Yang Terbaik Untuk Bermain
       </small>
+
     </div>
 
-    <div class="shuttle-logo">
-      SHUTTLE
-    </div>
+    <div class="brand-logo">
+
+  <img
+    src="assets/images/logo/logo1.png"
+    class="logo-shuttle">
+
+  <span>SHUTTLE</span>
+
+</div>
 
   </div>
 
+  <!-- CARD LIST -->
   <div class="court-list">
 
     <div
@@ -74,20 +99,32 @@
       *ngFor="let court of courts"
       (click)="openCourt(court)">
 
-      <img [src]="court.image">
+      <img
+        [src]="court.image"
+        alt="{{court.name}}">
 
       <div class="card-content">
 
         <h4>{{court.name}}</h4>
 
         <div class="info-row">
-          <ion-icon name="location"></ion-icon>
-          {{court.location}}
+
+          <ion-icon
+            name="location">
+          </ion-icon>
+
+          <span>{{court.location}}</span>
+
         </div>
 
         <div class="info-row rating">
-          <ion-icon name="star"></ion-icon>
-          4.9/5.0
+
+          <ion-icon
+            name="star">
+          </ion-icon>
+
+          <span>4.9/5.0</span>
+
         </div>
 
         <div class="price">
@@ -102,24 +139,31 @@
 
 </ion-content>
 
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
 
-    <ion-tab-button tab="home">
-      <ion-icon name="home-outline"></ion-icon>
-      <ion-label>Beranda</ion-label>
-    </ion-tab-button>
+  <div class="nav-item active">
 
-    <ion-tab-button tab="lapangan">
-      <ion-icon name="tennisball-outline"></ion-icon>
-      <ion-label>Lapangan</ion-label>
-    </ion-tab-button>
+    <ion-icon name="home-outline"></ion-icon>
 
-    <ion-tab-button tab="pesanan">
-      <ion-icon name="receipt-outline"></ion-icon>
-      <ion-label>Pesanan</ion-label>
-    </ion-tab-button>
+    <span>Beranda</span>
 
-  </ion-tab-bar>
-</ion-tabs>
-```
+  </div>
+
+  <div class="nav-item">
+
+    <ion-icon name="tennisball-outline"></ion-icon>
+
+    <span>Lapangan</span>
+
+  </div>
+
+  <div class="nav-item">
+
+    <ion-icon name="receipt-outline"></ion-icon>
+
+    <span>Pesanan</span>
+
+  </div>
+
+</div>

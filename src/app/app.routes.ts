@@ -79,6 +79,16 @@ import('./payment/payment.page')
 },
 
 {
+path: 'payment-method',
+loadComponent: () => import('./payment-method/payment-method.page').then( m => m.PaymentMethodPage)
+},
+
+{
+path: 'payment-success',
+loadComponent: () => import('./payment-success/payment-success.page').then( m => m.PaymentSuccessPage)
+},
+
+{
 path: 'success',
 loadComponent: () =>
 import('./success/success.page')
@@ -88,6 +98,5 @@ import('./success/success.page')
 {
 path: '**',
 redirectTo: 'onboarding'
-}
-
+},
 ];
