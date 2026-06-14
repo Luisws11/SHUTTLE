@@ -105,3 +105,43 @@ ion-content {
   }
 
 }
+
+.payment-item {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.payment-item.active {
+  border: 2px solid #009245;
+  background: #e9fff3;
+}
+
+.bottom-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 15px;
+  background: white;
+
+  box-shadow: 0 -2px 10px rgba(0,0,0,.08);
+}
+
+.bottom-button button {
+  width: 100%;
+  height: 55px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #009245;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.bottom-button button:disabled {
+  background: #bdbdbd;
+}

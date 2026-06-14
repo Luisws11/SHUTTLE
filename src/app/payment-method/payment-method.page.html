@@ -4,9 +4,9 @@
   <div class="header">
 
   <ion-icon
-    name="arrow-back-outline"
-    routerLink="/payment">
-  </ion-icon>
+  name="arrow-back-outline"
+  (click)="goBack()">
+</ion-icon>
 
   <h2>Metode Pembayaran</h2>
 
@@ -24,8 +24,10 @@
   </div>
 
   <!-- Payment List -->
-
-  <div class="payment-item">
+<div
+  class="payment-item"
+  [class.active]="selectedMethod === 'DANA'"
+  (click)="selectMethod('DANA')">
 
     <div class="payment-left">
 
@@ -40,7 +42,10 @@
 
   </div>
 
-  <div class="payment-item">
+  <div
+  class="payment-item"
+  [class.active]="selectedMethod === 'ShopeePay'"
+  (click)="selectMethod('ShopeePay')">
 
     <div class="payment-left">
 
@@ -55,7 +60,10 @@
 
   </div>
 
-  <div class="payment-item">
+  <div
+  class="payment-item"
+  [class.active]="selectedMethod === 'OVO'"
+  (click)="selectMethod('OVO')">
 
     <div class="payment-left">
 
@@ -70,7 +78,10 @@
 
   </div>
 
-  <div class="payment-item">
+  <div
+  class="payment-item"
+  [class.active]="selectedMethod === 'QRIS'"
+  (click)="selectMethod('QRIS')">
 
     <div class="payment-left">
 
@@ -85,7 +96,10 @@
 
   </div>
 
-  <div class="payment-item">
+  <div
+  class="payment-item"
+  [class.active]="selectedMethod === 'GoPay'"
+  (click)="selectMethod('GoPay')">
 
     <div class="payment-left">
 
@@ -100,4 +114,18 @@
 
   </div>
 
+<div style="height:90px"></div>
+
 </ion-content>
+
+<div class="bottom-button">
+
+  <button
+    routerLink="/payment-success"
+    [disabled]="!selectedMethod">
+
+    PILIH PEMBAYARAN
+
+  </button>
+
+</div>

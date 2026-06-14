@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 import {
   IonContent,
@@ -20,12 +22,17 @@ import {
   imports: [
     CommonModule,
     IonContent,
-    IonIcon
+    IonIcon,
+    RouterModule
   ]
 })
 export class BookingLapanganPage {
 
   selectedDate = 0;
+
+  selectedTime = '';
+
+  selectedCourt = '';
 
   dates = [
     '01 Jan',
@@ -54,10 +61,27 @@ export class BookingLapanganPage {
     '23.00'
   ];
 
-  constructor() {
-    addIcons({
-      arrowBackCircleOutline
-    });
+  constructor(
+  private router: Router
+) {
+
+  addIcons({
+    arrowBackCircleOutline
+  });
+
+}
+
+  selectDate(index: number) {
+    this.selectedDate = index;
   }
+
+  selectTime(time: string, court: string) {
+    this.selectedTime = time;
+    this.selectedCourt = court;
+  }
+
+  goBack() {
+  this.router.navigate(['/detail-lapangan']);
+}
 
 }

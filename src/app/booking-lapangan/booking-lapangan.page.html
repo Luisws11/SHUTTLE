@@ -7,9 +7,15 @@
       src="assets/picture/gor-dewi.jpg"
       class="hero-image">
 
-    <div class="back-button">
-      <ion-icon name="arrow-back-circle-outline"></ion-icon>
-    </div>
+  <div
+  class="back-button"
+  (click)="goBack()">
+
+  <ion-icon
+    name="arrow-back-circle-outline">
+  </ion-icon>
+
+</div>
 
   </div>
 
@@ -68,102 +74,81 @@
   </div>
 
   <!-- Lapangan A -->
-  <div class="court-section">
+ <div class="court-section">
 
-    <h3>🏸 LAPANGAN A</h3>
+  <h3>🏸 LAPANGAN A</h3>
 
-    <div class="time-grid">
+  <div class="time-grid">
 
-      <button>08.00</button>
-      <button>09.00</button>
-      <button>10.00</button>
-      <button>11.00</button>
+    <button
+      *ngFor="let time of timeSlots"
+      [class.selected]="selectedTime === time && selectedCourt === 'A'"
+      (click)="selectTime(time,'A')">
 
-      <button>12.00</button>
-      <button>13.00</button>
-      <button>14.00</button>
-      <button>15.00</button>
+      {{ time }}
 
-      <button>16.00</button>
-      <button>17.00</button>
-      <button>18.00</button>
-      <button>19.00</button>
-
-      <button>20.00</button>
-      <button>21.00</button>
-      <button>22.00</button>
-      <button>23.00</button>
-
-    </div>
+    </button>
 
   </div>
+
+</div>
 
   <!-- Lapangan B -->
-  <div class="court-section">
+ <div class="court-section">
 
-    <h3>🏸 LAPANGAN B</h3>
+  <h3>🏸 LAPANGAN B</h3>
 
-    <div class="time-grid">
+  <div class="time-grid">
 
-      <button>08.00</button>
-      <button>09.00</button>
-      <button>10.00</button>
-      <button>11.00</button>
+    <button
+      *ngFor="let time of timeSlots"
+      [class.selected]="selectedTime === time && selectedCourt === 'B'"
+      (click)="selectTime(time,'B')">
 
-      <button>12.00</button>
-      <button>13.00</button>
-      <button>14.00</button>
-      <button>15.00</button>
+      {{ time }}
 
-      <button>16.00</button>
-      <button>17.00</button>
-      <button>18.00</button>
-      <button>19.00</button>
-
-      <button>20.00</button>
-      <button>21.00</button>
-      <button>22.00</button>
-      <button>23.00</button>
-
-    </div>
+    </button>
 
   </div>
+
+</div>
 
   <!-- Lapangan C -->
-  <div class="court-section">
+ <div class="court-section">
 
-    <h3>🏸 LAPANGAN C</h3>
+  <h3>🏸 LAPANGAN C</h3>
 
-    <div class="time-grid">
+  <div class="time-grid">
 
-      <button>08.00</button>
-      <button>09.00</button>
-      <button>10.00</button>
-      <button>11.00</button>
+    <button
+      *ngFor="let time of timeSlots"
+      [class.selected]="selectedTime === time && selectedCourt === 'C'"
+      (click)="selectTime(time,'C')">
 
-      <button>12.00</button>
-      <button>13.00</button>
-      <button>14.00</button>
-      <button>15.00</button>
+      {{ time }}
 
-      <button>16.00</button>
-      <button>17.00</button>
-      <button>18.00</button>
-      <button>19.00</button>
-
-      <button>20.00</button>
-      <button>21.00</button>
-      <button>22.00</button>
-      <button>23.00</button>
-
-    </div>
+    </button>
 
   </div>
 
+</div>
+
   <div style="height:80px"></div>
+
+<div class="bottom-button">
+
+  <button
+    class="booking-btn"
+    routerLink="/payment">
+
+    PILIH LAPANGAN
+
+  </button>
+
+</div>
 
 </ion-content>
 
 <button routerLink="/payment">
-  PESAN LAPANGAN
+  PILIH LAPANGAN
 </button>

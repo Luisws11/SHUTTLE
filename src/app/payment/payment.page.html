@@ -4,9 +4,9 @@
   <div class="header">
 
     <ion-icon
-      name="arrow-back-outline"
-      routerLink="/booking-lapangan">
-    </ion-icon>
+  name="arrow-back-outline"
+  (click)="goBack()">
+</ion-icon>
 
     <h2>Ringkasan Order</h2>
 
@@ -126,9 +126,13 @@
 
   </div>
 
-  <div class="other-payment">
-    Pilih pembayaran lainnya →
-  </div>
+ <div
+  class="other-payment"
+  routerLink="/payment-method">
+
+  Pilih pembayaran lainnya →
+
+</div>
 
   <div class="total-section">
 

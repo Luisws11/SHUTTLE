@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 
 import {
   IonContent,
@@ -25,14 +26,17 @@ import {
   ]
 })
 export class PaymentMethodPage {
-
-  constructor() {
-
-    addIcons({
-      arrowBackOutline,
-      chevronForwardOutline
-    });
-
+constructor(
+  private router: Router
+) {
   }
+  goBack() {
+  this.router.navigate(['/payment']);
+}
+
+selectedMethod = '';
+selectMethod(method: string) {
+  this.selectedMethod = method;
+}
 
 }

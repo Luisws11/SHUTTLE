@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import {
   IonContent,
@@ -17,26 +19,33 @@ import {
   templateUrl: './payment.page.html',
   styleUrls: ['./payment.page.scss'],
   standalone: true,
-  imports: [
-    CommonModule,
-    IonContent,
-    IonIcon
-  ]
+ imports: [
+  CommonModule,
+  IonContent,
+  IonIcon,
+  RouterModule
+]
 })
 export class PaymentPage {
 
   selectedPayment = 'DANA';
 
-  constructor() {
+ constructor(
+  private router: Router
+) {
 
-    addIcons({
-      arrowBackOutline
-    });
+  addIcons({
+    arrowBackOutline
+  });
 
-  }
+}
 
   selectPayment(method: string) {
     this.selectedPayment = method;
   }
+
+  goBack() {
+  this.router.navigate(['/booking-lapangan']);
+}
 
 }
