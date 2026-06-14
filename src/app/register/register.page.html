@@ -1,105 +1,55 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-
     <ion-buttons slot="start">
-      <ion-button
-        color="dark"
-        class="back-btn"
-        routerLink="/onboarding"
-        routerDirection="back">
-
-        <ion-icon
-          slot="icon-only"
-          name="chevron-back-outline">
-        </ion-icon>
-
+      <ion-button color="dark" class="back-btn" routerLink="/onboarding" routerDirection="back">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding auth-content">
-
-  <div class="auth-header">
-
-    <div class="illustration-box short-illustration">
-      <img
-        src="assets/images/logo/logo.png"
-        alt="Register Illustration">
+<ion-content class="auth-content">
+  <div class="auth-container">
+    <div class="auth-header">
+      <div class="illustration-box short-illustration">
+        <img src="assets/images/logo/logo.png" alt="Register Illustration">
+      </div>
+      <h2>FILL YOUR ENERGY!</h2>
     </div>
 
-    <h2>FILL YOUR ENERGY!</h2>
+    <div class="form-container">
+      <ion-item lines="none" class="custom-input-item">
+        <ion-input type="text" placeholder="Username"></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="custom-input-item">
+        <ion-input type="email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="custom-input-item">
+        <ion-input type="password" placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="custom-input-item">
+        <ion-input type="password" placeholder="Confirm Password"></ion-input>
+      </ion-item>
 
+      <ion-button expand="block" color="success" class="main-auth-btn">
+        Agree and Register
+      </ion-button>
+    </div>
+
+    <div class="divider-container">
+      <span class="divider-text">Or Login with</span>
+    </div>
+
+    <div class="social-container">
+      <ion-button fill="outline" class="social-btn">
+        <img src="assets/images/logo/facebook.png" alt="Facebook">
+      </ion-button>
+      <ion-button fill="outline" class="social-btn">
+        <img src="assets/images/logo/google.png" alt="Google">
+      </ion-button>
+      <ion-button fill="outline" class="social-btn">
+        <img src="assets/images/logo/apple.png" alt="Apple">
+      </ion-button>
+    </div>
   </div>
-
-  <div class="form-container">
-
-    <ion-item lines="none" class="custom-input-item">
-      <ion-input
-        type="text"
-        placeholder="Username">
-      </ion-input>
-    </ion-item>
-
-    <ion-item lines="none" class="custom-input-item">
-      <ion-input
-        type="email"
-        placeholder="Email">
-      </ion-input>
-    </ion-item>
-
-    <ion-item lines="none" class="custom-input-item">
-      <ion-input
-        type="password"
-        placeholder="Password">
-      </ion-input>
-    </ion-item>
-
-    <ion-item lines="none" class="custom-input-item">
-      <ion-input
-        type="password"
-        placeholder="Confirm Password">
-      </ion-input>
-    </ion-item>
-
-    <ion-button
-      expand="block"
-      color="success"
-      class="main-auth-btn">
-
-      Agree and Register
-
-    </ion-button>
-
-  </div>
-
-  <div class="divider-container">
-    <span class="divider-text">
-      Or Login with
-    </span>
-  </div>
-
-  <div class="social-container">
-
-    <ion-button fill="outline" class="social-btn">
-      <img
-        src="assets/images/logo/facebook.png"
-        alt="Facebook">
-    </ion-button>
-
-    <ion-button fill="outline" class="social-btn">
-      <img
-        src="assets/images/logo/google.png"
-        alt="Google">
-    </ion-button>
-
-    <ion-button fill="outline" class="social-btn">
-      <img
-        src="assets/images/logo/apple.png"
-        alt="Apple">
-    </ion-button>
-
-  </div>
-
 </ion-content>
