@@ -1,0 +1,201 @@
+<ion-content [fullscreen]="true">
+
+  <div class="page-container">
+
+    <!-- HEADER -->
+
+    <div class="header-card">
+
+      <div>
+        <h1>Pesanan Saya</h1>
+        <p>Kelola semua booking lapanganmu</p>
+      </div>
+
+      <div class="booking-count">
+        {{ bookings.length }}
+      </div>
+
+    </div>
+
+    <!-- TAB -->
+
+    <div class="tabs">
+
+      <button
+        [class.active]="activeTab === 'upcoming'"
+        (click)="activeTab='upcoming'">
+
+        Akan Datang
+
+      </button>
+
+      <button
+        [class.active]="activeTab === 'history'"
+        (click)="activeTab='history'">
+
+        Riwayat
+
+      </button>
+
+      <button
+        [class.active]="activeTab === 'cancelled'"
+        (click)="activeTab='cancelled'">
+
+        Dibatalkan
+
+      </button>
+
+    </div>
+
+    <!-- UPCOMING -->
+
+    <ng-container *ngIf="activeTab === 'upcoming'">
+
+      <div
+        class="booking-card"
+        *ngFor="let booking of bookings">
+
+        <img
+          [src]="booking.image"
+          alt="lapangan">
+
+        <div class="booking-info">
+
+          <div class="status-badge">
+            Dikonfirmasi
+          </div>
+
+          <h3>{{ booking.venue }}</h3>
+
+          <div class="info-row">
+            <ion-icon name="location-outline"></ion-icon>
+            <span>{{ booking.location }}</span>
+          </div>
+
+          <div class="info-row">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <span>{{ booking.date }}</span>
+          </div>
+
+          <div class="info-row">
+            <ion-icon name="time-outline"></ion-icon>
+            <span>{{ booking.time }}</span>
+          </div>
+
+          <div class="court-tag">
+            {{ booking.court }}
+          </div>
+
+          <div class="card-footer">
+
+            <div class="price">
+              {{ booking.price }}
+            </div>
+
+            <div class="action-buttons">
+
+              <button class="outline-btn">
+                Detail
+              </button>
+
+              <button class="primary-btn">
+                Tiket
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </ng-container>
+
+    <!-- RIWAYAT -->
+
+    <ng-container *ngIf="activeTab === 'history'">
+
+      <div class="empty-state">
+
+        <ion-icon name="checkmark-circle"></ion-icon>
+
+        <h3>Belum Ada Riwayat</h3>
+
+        <p>Riwayat booking akan muncul di sini</p>
+
+      </div>
+
+    </ng-container>
+
+    <!-- DIBATALKAN -->
+
+    <ng-container *ngIf="activeTab === 'cancelled'">
+
+      <div class="empty-state">
+
+        <ion-icon name="close-circle"></ion-icon>
+
+        <h3>Tidak Ada Pesanan Dibatalkan</h3>
+
+        <p>Pesanan yang dibatalkan akan tampil di sini</p>
+
+      </div>
+
+    </ng-container>
+
+    <!-- PROMO -->
+
+    <div class="promo-card">
+
+      <h3>🏸 Booking Lagi Yuk!</h3>
+
+      <p>
+        Temukan lapangan favoritmu dan pesan dengan cepat.
+      </p>
+
+      <button>
+        Cari Lapangan
+      </button>
+
+    </div>
+
+  </div>
+
+</ion-content>
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+  <div class="nav-item" (click)="goHome()">
+
+    <div class="icon-wrapper">
+      <ion-icon name="home-outline"></ion-icon>
+    </div>
+
+    <span>Beranda</span>
+
+  </div>
+
+  <div class="nav-item">
+
+    <div class="icon-wrapper">
+      <ion-icon name="tennisball-outline"></ion-icon>
+    </div>
+
+    <span>Lapangan</span>
+
+  </div>
+
+  <div class="nav-item active">
+
+    <div class="icon-wrapper">
+      <ion-icon name="receipt-outline"></ion-icon>
+    </div>
+
+    <span>Pesanan</span>
+
+  </div>
+
+</div>

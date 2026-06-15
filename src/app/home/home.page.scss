@@ -249,52 +249,70 @@ ion-content {
 
 .bottom-nav {
   position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
 
-  bottom: 0;
-  left: 0;
-  right: 0;
+  height: 82px;
 
-  height: 70px;
+  background: #fff;
 
-  background: white;
-
-  border-top: 1px solid #e5e5e5;
+  border-radius: 22px;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
   z-index: 999;
 }
 
 .nav-item {
-  flex: 1;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: .2s ease;
 
-  color: #888;
+  gap: 4px;
 
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s ease;
+}
+
+.nav-icon ion-icon {
+  font-size: 22px;
+  color: #8e8e8e;
+}
+
+.nav-item span {
   font-size: 12px;
+  color: #8e8e8e;
+  font-weight: 500;
 }
 
-.court-card:active {
-  transform: scale(.98);
+/* ACTIVE */
+
+.nav-item.active .nav-icon {
+  background: #22c55e;
 }
 
-.nav-item ion-icon {
-  font-size: 24px;
-
-  margin-bottom: 4px;
+.nav-item.active .nav-icon ion-icon {
+  color: white;
 }
 
-.nav-item.active {
-  color: #009245;
+.nav-item.active span {
+  color: #22c55e;
   font-weight: 700;
-}
-
-.nav-item.active ion-icon {
-  color: #009245;
 }

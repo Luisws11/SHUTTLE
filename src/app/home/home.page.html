@@ -142,25 +142,36 @@
 <!-- BOTTOM NAV -->
 <div class="bottom-nav">
 
+  <!-- BERANDA -->
   <div class="nav-item active">
 
-    <ion-icon name="home-outline"></ion-icon>
+    <div class="nav-icon">
+      <ion-icon name="home-outline"></ion-icon>
+    </div>
 
     <span>Beranda</span>
 
   </div>
 
+  <!-- LAPANGAN -->
   <div class="nav-item">
 
-    <ion-icon name="tennisball-outline"></ion-icon>
+    <div class="nav-icon">
+      <ion-icon name="tennisball-outline"></ion-icon>
+    </div>
 
     <span>Lapangan</span>
 
   </div>
 
-  <div class="nav-item">
+  <!-- PESANAN -->
+  <div
+    class="nav-item"
+    (click)="goToPesanan()">
 
-    <ion-icon name="receipt-outline"></ion-icon>
+    <div class="nav-icon">
+      <ion-icon name="receipt-outline"></ion-icon>
+    </div>
 
     <span>Pesanan</span>
 

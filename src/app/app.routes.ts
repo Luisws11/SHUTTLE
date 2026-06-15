@@ -58,6 +58,11 @@ import('./home/home.page')
 },
 
 {
+    path: 'pesanan',
+    loadComponent: () => import('./pesanan/pesanan.page').then( m => m.PesananPage)
+},
+
+{
 path: 'detail-lapangan',
 loadComponent: () =>
 import('./detail-lapangan/detail-lapangan.page')
@@ -99,5 +104,5 @@ import('./success/success.page')
 path: '**',
 redirectTo: 'onboarding'
 },
-
+  
 ];

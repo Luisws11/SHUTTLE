@@ -100,7 +100,10 @@ export class HomePage {
         }
       }
     );
-
   }
 
+  goToPesanan(): void {
+  this.router.navigate(['/pesanan']);
+  }
+  
 }
