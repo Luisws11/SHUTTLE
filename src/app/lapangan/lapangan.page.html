@@ -1,0 +1,165 @@
+<ion-content [fullscreen]="true">
+
+  <div class="page-container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+      <h1>Lapangan</h1>
+
+      <div class="location">
+        <ion-icon name="location"></ion-icon>
+        <span>Karawang</span>
+      </div>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-box">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <input
+        type="text"
+        placeholder="Cari lapangan..." />
+
+    </div>
+
+    <div class="stats-card">
+  <div>
+    <h2>12</h2>
+    <span>Lapangan</span>
+  </div>
+
+  <div>
+    <h2>4.9</h2>
+    <span>Rating</span>
+  </div>
+
+  <div>
+    <h2>24/7</h2>
+    <span>Booking</span>
+  </div>
+</div>
+
+    <!-- Filter -->
+
+    <div class="filter-container">
+
+      <div class="filter-chip active">
+        Semua
+      </div>
+
+      <div class="filter-chip">
+        Indoor
+      </div>
+
+      <div class="filter-chip">
+        Outdoor
+      </div>
+
+      <div class="filter-chip">
+        Terdekat
+      </div>
+
+    </div>
+
+    <!-- Popular Section -->
+
+<div class="popular-section">
+
+  <div class="section-header">
+
+    <h3>🔥 Populer Minggu Ini</h3>
+
+    <span>Lihat Semua</span>
+
+  </div>
+
+  <div class="popular-card">
+
+    <img src="assets/images/home/banner2.png">
+
+    <div class="overlay">
+
+      <div>
+        <h2>GOR Dagus</h2>
+        <p>Karawang Timur</p>
+      </div>
+
+      <div class="popular-price">
+        Rp35.000/Jam
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- Total -->
+
+    <div class="section-title">
+
+  <h3>🏸 Semua Lapangan</h3>
+
+  <span>{{ lapanganList.length }} tersedia</span>
+
+</div>
+
+    <!-- Grid -->
+
+    <div class="lapangan-grid">
+
+      <div
+        class="lapangan-card"
+        *ngFor="let item of lapanganList">
+
+        <div class="image-wrapper">
+
+          <img
+            [src]="item.image"
+            [alt]="item.nama">
+
+          <div class="badge">
+            Indoor
+          </div>
+
+          <div class="favorite">
+            <ion-icon name="heart-outline"></ion-icon>
+          </div>
+
+        </div>
+
+        <div class="card-body">
+
+          <h4>{{ item.nama }}</h4>
+
+          <p class="location-text">
+            <ion-icon name="location-outline"></ion-icon>
+            {{ item.lokasi }}
+          </p>
+
+          <div class="bottom-info">
+
+            <span class="rating">
+              ⭐ {{ item.rating }}
+            </span>
+
+            <span class="price">
+              Rp {{ item.harga | number }}
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>
