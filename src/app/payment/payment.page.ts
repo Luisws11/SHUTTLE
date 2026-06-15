@@ -38,6 +38,12 @@ export class PaymentPage {
     arrowBackOutline
   });
 
+  const nav = history.state;
+
+  if (nav.paymentMethod) {
+    this.selectedPayment = nav.paymentMethod;
+  }
+
 }
 
   selectPayment(method: string) {

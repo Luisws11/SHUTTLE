@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import {
   IonContent,
   IonButton,
@@ -34,13 +35,24 @@ import {
 })
 export class LoginPage {
 
-  constructor() {
-    addIcons({
-      chevronBackOutline,
-      trophyOutline,
-      mailOutline,
-      lockClosedOutline
-    });
-  }
+ constructor(
+  private router: Router
+) {
+
+  addIcons({
+    chevronBackOutline,
+    trophyOutline,
+    mailOutline,
+    lockClosedOutline
+  });
+
+}
+ login() {
+
+  // nanti bisa ditambah validasi
+
+  this.router.navigate(['/home']);
+
+}
 
 }

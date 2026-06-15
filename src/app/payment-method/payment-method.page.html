@@ -121,11 +121,11 @@
 <div class="bottom-button">
 
   <button
-    routerLink="/payment-success"
-    [disabled]="!selectedMethod">
+  (click)="confirmPayment()"
+  [disabled]="!selectedMethod">
 
-    PILIH PEMBAYARAN
+  PILIH PEMBAYARAN
 
-  </button>
+</button>
 
 </div>
