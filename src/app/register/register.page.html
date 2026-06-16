@@ -10,30 +10,58 @@
 
 <ion-content class="auth-content">
   <div class="auth-container">
+    
     <div class="auth-header">
       <div class="illustration-box short-illustration">
-        <img src="assets/images/logo/logo.png" alt="Register Illustration">
+        <img src="assets/images/logo/logo1.png" alt="Register Illustration">
       </div>
       <h2>FILL YOUR ENERGY!</h2>
     </div>
 
     <div class="form-container">
+      
       <ion-item lines="none" class="custom-input-item">
-        <ion-input type="text" placeholder="Username"></ion-input>
-      </ion-item>
-      <ion-item lines="none" class="custom-input-item">
-        <ion-input type="email" placeholder="Email"></ion-input>
-      </ion-item>
-      <ion-item lines="none" class="custom-input-item">
-        <ion-input type="password" placeholder="Password"></ion-input>
-      </ion-item>
-      <ion-item lines="none" class="custom-input-item">
-        <ion-input type="password" placeholder="Confirm Password"></ion-input>
+        <ion-input 
+          type="text" 
+          [(ngModel)]="name"
+          style="color: #000000 !important; --color: #000000 !important;"
+          placeholder="Username">
+        </ion-input>
       </ion-item>
 
-      <ion-button expand="block" color="success" class="main-auth-btn">
+      <ion-item lines="none" class="custom-input-item">
+        <ion-input 
+          type="email" 
+          [(ngModel)]="email"
+          style="color: #000000 !important; --color: #000000 !important;"
+          placeholder="Email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="custom-input-item">
+        <ion-input 
+          type="password" 
+          [(ngModel)]="password"
+          style="color: #000000 !important; --color: #000000 !important;"
+          placeholder="Password">
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="custom-input-item">
+        <ion-input 
+          type="password" 
+          style="color: #000000 !important; --color: #000000 !important;"
+          placeholder="Confirm Password">
+        </ion-input>
+      </ion-item>
+
+      <ion-button 
+        expand="block" 
+        style="--background: #2dd36f; --background-activated: #28ba62; color: white; font-weight: bold; margin-top: 20px;"
+        (click)="onRegister()">
         Agree and Register
       </ion-button>
+
     </div>
 
     <div class="divider-container">
@@ -51,5 +79,6 @@
         <img src="assets/images/logo/apple.png" alt="Apple">
       </ion-button>
     </div>
+
   </div>
 </ion-content>
