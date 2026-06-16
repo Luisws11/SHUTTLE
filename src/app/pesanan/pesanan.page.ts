@@ -75,4 +75,7 @@ export class PesananPage {
     this.router.navigate(['/home']);
   }
 
+  goToLapangan() {
+  this.router.navigate(['/lapangan']);
+}
 }

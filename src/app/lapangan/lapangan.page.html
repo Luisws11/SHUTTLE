@@ -3,49 +3,20 @@
   <div class="page-container">
 
     <!-- Header -->
-
     <div class="header">
-
       <h1>Lapangan</h1>
-
-      <div class="location">
-        <ion-icon name="location"></ion-icon>
-        <span>Karawang</span>
-      </div>
-
     </div>
 
     <!-- Search -->
-
     <div class="search-box">
-
       <ion-icon name="search-outline"></ion-icon>
 
       <input
         type="text"
         placeholder="Cari lapangan..." />
-
     </div>
 
-    <div class="stats-card">
-  <div>
-    <h2>12</h2>
-    <span>Lapangan</span>
-  </div>
-
-  <div>
-    <h2>4.9</h2>
-    <span>Rating</span>
-  </div>
-
-  <div>
-    <h2>24/7</h2>
-    <span>Booking</span>
-  </div>
-</div>
-
     <!-- Filter -->
-
     <div class="filter-container">
 
       <div class="filter-chip active">
@@ -66,57 +37,32 @@
 
     </div>
 
-    <!-- Popular Section -->
+    <div class="divider"></div>
 
-<div class="popular-section">
+    <!-- Subtitle -->
+    <div class="page-subtitle">
+      Temukan Yang Terbaik Untuk Bermain
+    </div>
 
-  <div class="section-header">
+    <!-- Section Title -->
+    <div class="section-title">
 
-    <h3>🔥 Populer Minggu Ini</h3>
+      <h3>Lapangan Tersedia</h3>
 
-    <span>Lihat Semua</span>
-
-  </div>
-
-  <div class="popular-card">
-
-    <img src="assets/images/home/banner2.png">
-
-    <div class="overlay">
-
-      <div>
-        <h2>GOR Dagus</h2>
-        <p>Karawang Timur</p>
-      </div>
-
-      <div class="popular-price">
-        Rp35.000/Jam
-      </div>
+      <span>
+        {{ lapanganList.length }} tersedia
+      </span>
 
     </div>
 
-  </div>
-
-</div>
-
-    <!-- Total -->
-
-    <div class="section-title">
-
-  <h3>🏸 Semua Lapangan</h3>
-
-  <span>{{ lapanganList.length }} tersedia</span>
-
-</div>
-
     <!-- Grid -->
-
     <div class="lapangan-grid">
 
       <div
         class="lapangan-card"
         *ngFor="let item of lapanganList">
 
+        <!-- Image -->
         <div class="image-wrapper">
 
           <img
@@ -127,12 +73,9 @@
             Indoor
           </div>
 
-          <div class="favorite">
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-
         </div>
 
+        <!-- Content -->
         <div class="card-body">
 
           <h4>{{ item.nama }}</h4>
@@ -142,17 +85,13 @@
             {{ item.lokasi }}
           </p>
 
-          <div class="bottom-info">
+          <p class="rating">
+            ⭐ {{ item.rating }}/5.0
+          </p>
 
-            <span class="rating">
-              ⭐ {{ item.rating }}
-            </span>
-
-            <span class="price">
-              Rp {{ item.harga | number }}
-            </span>
-
-          </div>
+          <p class="price">
+            Mulai Rp {{ item.harga | number }}/Jam
+          </p>
 
         </div>
 
@@ -163,3 +102,45 @@
   </div>
 
 </ion-content>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+
+  <!-- BERANDA -->
+  <div
+    class="nav-item"
+    (click)="goToHome()">
+
+    <div class="nav-icon">
+      <ion-icon name="home-outline"></ion-icon>
+    </div>
+
+    <span>Beranda</span>
+
+  </div>
+
+  <!-- LAPANGAN -->
+  <div class="nav-item active">
+
+    <div class="nav-icon">
+      <ion-icon name="tennisball-outline"></ion-icon>
+    </div>
+
+    <span>Lapangan</span>
+
+  </div>
+
+  <!-- PESANAN -->
+  <div
+    class="nav-item"
+    (click)="goToPesanan()">
+
+    <div class="nav-icon">
+      <ion-icon name="receipt-outline"></ion-icon>
+    </div>
+
+    <span>Pesanan</span>
+
+  </div>
+
+</div>

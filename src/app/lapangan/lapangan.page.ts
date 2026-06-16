@@ -1,7 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
 import { IonicModule } from '@ionic/angular';
+
+import { addIcons } from 'ionicons';
+
+import {
+  searchOutline,
+  locationOutline,
+  homeOutline,
+  tennisballOutline,
+  receiptOutline
+} from 'ionicons/icons';
 
 @Component({
   selector: 'app-lapangan',
@@ -15,6 +27,26 @@ import { IonicModule } from '@ionic/angular';
   ]
 })
 export class LapanganPage {
+
+  constructor(private router: Router) {
+
+    addIcons({
+      searchOutline,
+      locationOutline,
+      homeOutline,
+      tennisballOutline,
+      receiptOutline
+    });
+
+  }
+
+  goToHome() {
+    this.router.navigate(['/home']);
+  }
+
+  goToPesanan() {
+    this.router.navigate(['/pesanan']);
+  }
 
   searchText = '';
 

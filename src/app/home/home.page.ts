@@ -106,4 +106,8 @@ export class HomePage {
   this.router.navigate(['/pesanan']);
   }
   
+  goToLapangan(): void {
+  this.router.navigate(['/lapangan']);
+}
+  
 }
