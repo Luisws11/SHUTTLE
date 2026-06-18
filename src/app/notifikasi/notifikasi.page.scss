@@ -1,0 +1,43 @@
+ion-content {
+  --background: #f8fafc;
+}
+
+.notification-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.notification-card {
+  width: 100%;
+  text-align: center;
+}
+
+.notification-icon {
+  font-size: 90px;
+  color: #009245;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+p {
+  margin-top: 10px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+ion-button {
+  margin-top: 24px;
+
+  --background: #009245;
+  --border-radius: 14px;
+
+  height: 50px;
+}

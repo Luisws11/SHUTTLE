@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Notifikasi</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="notification-container">
+
+    <div class="notification-card">
+
+    <ion-icon
+  name="notifications-outline"
+  class="top-icon">
+</ion-icon>
+
+      <h2>Belum Ada Notifikasi</h2>
+
+      <p>
+        Saat ada promo, booking, atau update pembayaran,
+        notifikasi akan muncul di sini.
+      </p>
+
+      <ion-button
+       expand="block"
+       (click)="goToLapangan()">
+
+       Jelajahi Lapangan
+
+      </ion-button>
+
+    </div>
+
+  </div>
+
+</ion-content>

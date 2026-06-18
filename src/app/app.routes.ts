@@ -66,8 +66,19 @@ export const routes: Routes = [
     path: 'success',
     loadComponent: () => import('./success/success.page').then(m => m.SuccessPage)
   },
+   {
+    path: 'notifikasi',
+    loadComponent: () => import('./notifikasi/notifikasi.page').then( m => m.NotifikasiPage)
+  },
+  {
+    path: 'profile',
+    loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
+  },
   {
     path: '**',
     redirectTo: 'onboarding'
-  }
+  },
+  
+
+
 ];

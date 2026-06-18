@@ -109,5 +109,13 @@ export class HomePage {
   goToLapangan(): void {
   this.router.navigate(['/lapangan']);
 }
-  
+
+  goToNotification(): void {
+  this.router.navigate(['/notifikasi']);
+}
+
+goToProfile(): void {
+  this.router.navigate(['/profile']);
+}
+
 }
