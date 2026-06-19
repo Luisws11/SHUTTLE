@@ -77,7 +77,23 @@ export const routes: Routes = [
   {
     path: '**',
     redirectTo: 'onboarding'
+  },  {
+    path: 'admin-dashboard',
+    loadComponent: () => import('./admin/admin-dashboard/admin-dashboard.page').then( m => m.AdminDashboardPage)
   },
+  {
+    path: 'admin-operasional',
+    loadComponent: () => import('./admin/admin-operasional/admin-operasional.page').then( m => m.AdminOperasionalPage)
+  },
+  {
+    path: 'admin-laporan',
+    loadComponent: () => import('./admin/admin-laporan/admin-laporan.page').then( m => m.AdminLaporanPage)
+  },
+  {
+    path: 'admin-profil',
+    loadComponent: () => import('./admin/admin-profil/admin-profil.page').then( m => m.AdminProfilPage)
+  },
+
   
 
 
