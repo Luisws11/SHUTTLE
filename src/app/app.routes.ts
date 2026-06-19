@@ -74,7 +74,6 @@ export const routes: Routes = [
     path: 'profile',
     loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
   },
-  
   {
     path: 'admin-dashboard',
     loadComponent: () => import('./admin/admin-dashboard/admin-dashboard.page').then( m => m.AdminDashboardPage)
@@ -96,12 +95,10 @@ export const routes: Routes = [
   loadComponent: () =>
     import('./informasi-akun/informasi-akun.page')
       .then(m => m.InformasiAkunPage)
-},
+  },
   {
     path: '**',
     redirectTo: 'onboarding'
   
   },
-
-
 ];
