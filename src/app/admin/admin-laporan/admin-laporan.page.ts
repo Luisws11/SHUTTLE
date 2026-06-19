@@ -1,20 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-admin-laporan',
   templateUrl: './admin-laporan.page.html',
   styleUrls: ['./admin-laporan.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [
+    CommonModule,
+    IonContent
+  ]
 })
-export class AdminLaporanPage implements OnInit {
+export class AdminLaporanPage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  transaksiList = [
+    {
+      nama: 'Thoriq Reva',
+      nominal: '100.000',
+      status: 'Selesai'
+    },
+    {
+      nama: 'Andi Saputra',
+      nominal: '50.000',
+      status: 'Selesai'
+    },
+    {
+      nama: 'Rizky',
+      nominal: '150.000',
+      status: 'Selesai'
+    }
+  ];
 
 }

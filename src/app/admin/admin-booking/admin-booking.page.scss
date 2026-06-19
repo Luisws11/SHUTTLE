@@ -1,0 +1,103 @@
+ion-content {
+  --background: #f4f7fb;
+}
+
+.booking-container {
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.header p {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+.search-box {
+  background: white;
+  padding: 14px 16px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+
+  color: #94a3b8;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.booking-card {
+  background: white;
+  border-radius: 20px;
+  padding: 18px;
+  margin-bottom: 16px;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+}
+
+.booking-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-top h3 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.booking-top span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.booking-time {
+  margin-top: 12px;
+  color: #475569;
+}
+
+.status {
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.approved {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.rejected {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.detail-btn {
+  width: 100%;
+  margin-top: 16px;
+
+  border: none;
+
+  background: #009245;
+  color: white;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  font-weight: 700;
+}

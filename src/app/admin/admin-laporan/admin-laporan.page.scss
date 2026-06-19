@@ -1,0 +1,312 @@
+ion-content {
+  --background: #f4f7fb;
+}
+
+.laporan-container {
+  padding: 20px;
+}
+
+/* HEADER */
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.header p {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+/* HERO */
+
+.hero-card {
+  background: linear-gradient(
+    135deg,
+    #009245,
+    #00b050
+  );
+
+  color: white;
+
+  border-radius: 24px;
+
+  padding: 22px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  box-shadow: 0 10px 25px rgba(0,146,69,.25);
+}
+
+.hero-icon {
+  font-size: 40px;
+}
+
+.hero-content span {
+  font-size: 13px;
+  opacity: .9;
+}
+
+.hero-content h2 {
+  margin: 6px 0;
+  font-size: 28px;
+}
+
+.hero-content p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* STATS */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.stats-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.stats-icon {
+  font-size: 24px;
+}
+
+.stats-card span {
+  display: block;
+  margin-top: 10px;
+
+  font-size: 12px;
+  color: #64748b;
+}
+
+.stats-card h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  color: #009245;
+  font-size: 24px;
+}
+
+/* CHART */
+
+.chart-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.chart-card h3 {
+  margin-top: 0;
+}
+
+.chart {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  height: 180px;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fill {
+  width: 24px;
+  background: #009245;
+  border-radius: 10px;
+}
+
+.bar span {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+/* TRANSAKSI */
+
+.section-title {
+  margin-bottom: 14px;
+}
+
+.transaction-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 16px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.transaction-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  background: #e8fff1;
+
+  color: #009245;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+}
+
+.transaction-left h4 {
+  margin: 0;
+}
+
+.transaction-left p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.transaction-right {
+  text-align: right;
+}
+
+.transaction-right strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.success-badge {
+  background: #dcfce7;
+  color: #15803d;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+/* INFO CARD */
+
+.info-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  color: #1e293b;
+}
+
+/* STATUS BOOKING */
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.status-box {
+  text-align: center;
+
+  border-radius: 16px;
+
+  padding: 14px;
+}
+
+.status-box span {
+  display: block;
+  font-size: 12px;
+}
+
+.status-box h2 {
+  margin: 8px 0 0;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.reject {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* TOP LAPANGAN */
+
+.lapangan-row {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.lapangan-row:last-child {
+  border-bottom: none;
+}
+
+.lapangan-row span {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.lapangan-row strong {
+  color: #009245;
+}

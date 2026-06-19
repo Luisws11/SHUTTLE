@@ -1,13 +1,105 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>admin-profil</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+```html
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">admin-profil</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <div class="profil-container">
+
+    <!-- Banner Profile -->
+
+    <div class="profile-banner">
+
+      <div class="avatar">
+        A
+      </div>
+
+      <h2>{{ admin.nama }}</h2>
+
+      <span>{{ admin.role }}</span>
+
+      <p>{{ admin.email }}</p>
+
+    </div>
+
+    <!-- Informasi Akun -->
+
+    <h3 class="section-title">
+      Informasi Akun
+    </h3>
+
+    <div class="info-card">
+
+      <div class="info-item">
+
+        <div>
+          <small>Nama</small>
+          <strong>{{ admin.nama }}</strong>
+        </div>
+
+      </div>
+
+      <div class="info-item">
+
+        <div>
+          <small>Email</small>
+          <strong>{{ admin.email }}</strong>
+        </div>
+
+      </div>
+
+      <div class="info-item">
+
+        <div>
+          <small>Nomor HP</small>
+          <strong>{{ admin.phone }}</strong>
+        </div>
+
+      </div>
+
+      <div class="info-item">
+
+        <div>
+          <small>Role</small>
+          <strong>{{ admin.role }}</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Action Button -->
+
+    <button
+      class="primary-btn"
+      (click)="editProfil()">
+
+      ⚙️ Edit Profil
+
+    </button>
+
+    <button
+      class="secondary-btn"
+      (click)="ubahPassword()">
+
+      🔒 Ubah Password
+
+    </button>
+
+    <button
+      class="logout-btn"
+      (click)="logout()">
+
+      🚪 Logout
+
+    </button>
+
+    <!-- App Version -->
+
+    <div class="app-info">
+
+      SHUTTLE v1.0.0
+
+    </div>
+
+  </div>
+
 </ion-content>
+```

@@ -1,13 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>admin-booking</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">admin-booking</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <div class="booking-container">
+
+    <div class="header">
+      <h1>Kelola Booking</h1>
+      <p>Kelola seluruh pemesanan lapangan</p>
+    </div>
+
+    <div class="search-box">
+      🔍 Cari Booking...
+    </div>
+
+    <div
+      class="booking-card"
+      *ngFor="let booking of bookingList">
+
+      <div class="booking-top">
+
+        <div>
+          <h3>{{ booking.nama }}</h3>
+
+          <span>
+            {{ booking.lapangan }}
+          </span>
+        </div>
+
+        <div
+          class="status"
+          [ngClass]="{
+            'pending': booking.status === 'Pending',
+            'approved': booking.status === 'Disetujui',
+            'rejected': booking.status === 'Ditolak'
+          }">
+
+          {{ booking.status }}
+
+        </div>
+
+      </div>
+
+      <div class="booking-time">
+        🕒 {{ booking.jam }}
+      </div>
+
+      <button
+        class="detail-btn"
+        (click)="lihatDetail(booking)">
+
+        Lihat Detail
+
+      </button>
+
+    </div>
+
+  </div>
+
 </ion-content>

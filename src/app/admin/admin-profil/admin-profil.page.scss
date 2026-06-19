@@ -1,0 +1,174 @@
+ion-content {
+  --background: #f4f7fb;
+}
+
+.profil-container {
+  padding: 20px;
+}
+
+/* BANNER */
+
+.profile-banner {
+  background: linear-gradient(
+    135deg,
+    #009245,
+    #00b050
+  );
+
+  border-radius: 24px;
+
+  padding: 30px 20px;
+
+  text-align: center;
+
+  color: white;
+
+  margin-bottom: 24px;
+
+  box-shadow: 0 10px 25px rgba(0,146,69,.25);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+
+  background: white;
+  color: #009245;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.profile-banner h2 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile-banner span {
+  display: block;
+
+  margin-top: 6px;
+
+  opacity: .9;
+
+  font-size: 14px;
+}
+
+.profile-banner p {
+  margin-top: 10px;
+
+  opacity: .9;
+
+  font-size: 14px;
+}
+
+/* SECTION */
+
+.section-title {
+  margin-bottom: 12px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #1e293b;
+}
+
+/* INFO CARD */
+
+.info-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 8px 18px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.info-item {
+  padding: 16px 0;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item small {
+  display: block;
+
+  color: #94a3b8;
+
+  margin-bottom: 6px;
+
+  font-size: 12px;
+}
+
+.info-item strong {
+  color: #1e293b;
+
+  font-size: 15px;
+}
+
+/* BUTTON */
+
+.primary-btn,
+.secondary-btn,
+.logout-btn {
+  width: 100%;
+
+  border: none;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.primary-btn {
+  background: #009245;
+  color: white;
+
+  box-shadow: 0 8px 20px rgba(0,146,69,.25);
+}
+
+.secondary-btn {
+  background: white;
+  color: #1e293b;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.logout-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* VERSION */
+
+.app-info {
+  text-align: center;
+
+  margin-top: 24px;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+}

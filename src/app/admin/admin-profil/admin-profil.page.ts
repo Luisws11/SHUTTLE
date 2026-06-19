@@ -1,20 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-admin-profil',
   templateUrl: './admin-profil.page.html',
   styleUrls: ['./admin-profil.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [
+    CommonModule,
+    IonContent
+  ]
 })
-export class AdminProfilPage implements OnInit {
+export class AdminProfilPage {
 
-  constructor() { }
+  admin = {
+    nama: 'Admin SHUTTLE',
+    email: 'admin@shuttle.com',
+    phone: '08123456789',
+    role: 'Administrator'
+  };
 
-  ngOnInit() {
+  editProfil() {
+    console.log('Edit Profil');
+  }
+
+  ubahPassword() {
+    console.log('Ubah Password');
+  }
+
+  logout() {
+    console.log('Logout');
   }
 
 }

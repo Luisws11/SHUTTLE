@@ -1,13 +1,181 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>admin-laporan</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">admin-laporan</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <div class="laporan-container">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Laporan</h1>
+      <p>Ringkasan performa SHUTTLE</p>
+    </div>
+
+    <!-- Hero Revenue -->
+
+    <div class="hero-card">
+
+      <div class="hero-icon">
+        💰
+      </div>
+
+      <div class="hero-content">
+
+        <span>Pendapatan Bulan Ini</span>
+
+        <h2>Rp 15.500.000</h2>
+
+        <p>📈 Naik 12% dibanding bulan lalu</p>
+
+      </div>
+
+    </div>
+
+    <!-- Statistik -->
+
+    <div class="stats-grid">
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+          📅
+        </div>
+
+        <span>Booking Hari Ini</span>
+
+        <h3>12</h3>
+
+      </div>
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+          👥
+        </div>
+
+        <span>Total User</span>
+
+        <h3>85</h3>
+
+      </div>
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+          🏸
+        </div>
+
+        <span>Lapangan Aktif</span>
+
+        <h3>3</h3>
+
+      </div>
+
+      <div class="stats-card">
+
+        <div class="stats-icon">
+          💵
+        </div>
+
+        <span>Pendapatan Hari Ini</span>
+
+        <h3>Rp 750K</h3>
+
+      </div>
+
+    </div>
+
+    <!-- STATUS BOOKING -->
+
+<div class="info-card">
+
+  <h3>Status Booking Hari Ini</h3>
+
+  <div class="status-grid">
+
+    <div class="status-box pending">
+      <span>Pending</span>
+      <h2>3</h2>
+    </div>
+
+    <div class="status-box success">
+      <span>Disetujui</span>
+      <h2>8</h2>
+    </div>
+
+    <div class="status-box reject">
+      <span>Ditolak</span>
+      <h2>1</h2>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- LAPANGAN TERFAVORIT -->
+
+<div class="info-card">
+
+  <h3>Lapangan Terfavorit</h3>
+
+  <div class="top-lapangan">
+
+    <div class="lapangan-row">
+      <span>🥇 Lapangan A</span>
+      <strong>12 Booking</strong>
+    </div>
+
+    <div class="lapangan-row">
+      <span>🥈 Lapangan B</span>
+      <strong>8 Booking</strong>
+    </div>
+
+    <div class="lapangan-row">
+      <span>🥉 Lapangan C</span>
+      <strong>5 Booking</strong>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- RIWAYAT TRANSAKSI -->
+
+<h3 class="section-title">
+  Riwayat Transaksi
+</h3>
+
+<div
+  class="transaction-card"
+  *ngFor="let transaksi of transaksiList">
+
+  <div class="transaction-left">
+
+    <div class="avatar">
+      {{ transaksi.nama.charAt(0) }}
+    </div>
+
+    <div>
+
+      <h4>{{ transaksi.nama }}</h4>
+
+      <p>Booking Lapangan</p>
+
+    </div>
+
+  </div>
+
+  <div class="transaction-right">
+
+    <strong>
+      Rp {{ transaksi.nominal }}
+    </strong>
+
+    <span class="success-badge">
+      {{ transaksi.status }}
+    </span>
+
+  </div>
+
+</div>
+
+  </div>
+
 </ion-content>
