@@ -1,0 +1,318 @@
+ion-content {
+  --background: #f5f7fb;
+}
+
+.dashboard-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.header h1 {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: #009245;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+.hero-card {
+  margin-top: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #009245,
+    #00b050
+  );
+
+  color: white;
+
+  border-radius: 24px;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-card h2 {
+  margin: 0;
+}
+
+.hero-card p {
+  margin-top: 10px;
+  opacity: .9;
+}
+
+.hero-icon {
+  font-size: 55px;
+}
+
+.stats-grid {
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 12px;
+}
+
+.stat-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.stat-icon {
+  font-size: 22px;
+}
+
+.stat-value {
+  margin-top: 8px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #009245;
+}
+
+.stat-label {
+  margin-top: 4px;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+.section-title {
+  margin-top: 28px;
+  margin-bottom: 14px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+}
+
+.action-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 16px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.action-circle {
+  width: 50px;
+  height: 50px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: #e8fff1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+}
+
+.action-card span {
+  display: block;
+  margin-top: 10px;
+}
+
+.booking-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 16px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.booking-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  background: #e8fff1;
+
+  color: #009245;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+.booking-name {
+  font-weight: 700;
+}
+
+.booking-detail {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.booking-time {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.status {
+  padding: 8px 12px;
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.selesai {
+  background: #d4edda;
+  color: #155724;
+}
+
+.ditolak {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.activity-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  margin-bottom: 30px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.activity-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.operational-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.operational-item {
+  padding: 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.operational-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.operational-icon {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: #e8fff1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+}
+
+.operational-title {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.operational-desc {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.arrow {
+  color: #94a3b8;
+  font-size: 20px;
+}
+
+.divider {
+  height: 1px;
+  background: #f1f5f9;
+}

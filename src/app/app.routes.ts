@@ -97,8 +97,17 @@ export const routes: Routes = [
       .then(m => m.InformasiAkunPage)
   },
   {
+    path: 'admin-lapangan',
+    loadComponent: () => import('./admin/admin-lapangan/admin-lapangan.page').then( m => m.AdminLapanganPage)
+  },
+  {
+    path: 'admin-booking',
+    loadComponent: () => import('./admin/admin-booking/admin-booking.page').then( m => m.AdminBookingPage)
+  },
+  {
     path: '**',
     redirectTo: 'onboarding'
-  
   },
+  
+
 ];

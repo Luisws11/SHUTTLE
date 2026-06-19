@@ -1,13 +1,190 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>admin-dashboard</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">admin-dashboard</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <div class="dashboard-container">
+
+    <!-- HEADER -->
+    <div class="header">
+
+      <div>
+        <span class="welcome">
+          Selamat Datang 👋
+        </span>
+
+        <h1>Admin SHUTTLE</h1>
+      </div>
+
+      <div class="profile-avatar">
+        A
+      </div>
+
+    </div>
+
+    <!-- HERO CARD -->
+    <div class="hero-card">
+
+      <div>
+        <h2>12 Booking Hari Ini</h2>
+
+        <p>
+          Kelola booking, lapangan,
+          dan aktivitas pengguna
+          dengan lebih mudah.
+        </p>
+      </div>
+
+      <div class="hero-icon">
+        🏸
+      </div>
+
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid">
+
+      <div
+        class="stat-card"
+        *ngFor="let item of stats">
+
+        <div class="stat-icon">
+          {{ item.icon }}
+        </div>
+
+        <div class="stat-value">
+          {{ item.value }}
+        </div>
+
+        <div class="stat-label">
+          {{ item.title }}
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- OPERASIONAL -->
+
+<h3 class="section-title">
+  Operasional
+</h3>
+
+<div class="operational-card">
+
+  <div class="operational-item">
+
+    <div class="operational-left">
+      <div class="operational-icon">
+        🏸
+      </div>
+
+      <div>
+        <div class="operational-title">
+          Kelola Lapangan
+        </div>
+
+        <div class="operational-desc">
+          Tambah, edit dan atur lapangan
+        </div>
+      </div>
+    </div>
+
+    <div class="arrow">
+      →
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="operational-item">
+
+    <div class="operational-left">
+      <div class="operational-icon">
+        📅
+      </div>
+
+      <div>
+        <div class="operational-title">
+          Kelola Booking
+        </div>
+
+        <div class="operational-desc">
+          Konfirmasi dan kelola pesanan
+        </div>
+      </div>
+    </div>
+
+    <div class="arrow">
+      →
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- BOOKING -->
+    <h3 class="section-title">
+      Booking Terbaru
+    </h3>
+
+    <div
+      class="booking-card"
+      *ngFor="let booking of recentBookings">
+
+      <div class="booking-left">
+
+        <div class="avatar">
+          {{ booking.nama.charAt(0) }}
+        </div>
+
+        <div>
+
+          <div class="booking-name">
+            {{ booking.nama }}
+          </div>
+
+          <div class="booking-detail">
+            {{ booking.lapangan }}
+          </div>
+
+          <div class="booking-time">
+            {{ booking.jam }}
+          </div>
+
+        </div>
+
+      </div>
+
+      <div
+        class="status"
+        [ngClass]="booking.status.toLowerCase()">
+
+        {{ booking.status }}
+
+      </div>
+
+    </div>
+
+    <!-- AKTIVITAS -->
+    <h3 class="section-title">
+      Aktivitas Hari Ini
+    </h3>
+
+    <div class="activity-card">
+
+    <div class="activity-item">
+    🔔 Booking baru masuk dari Thoriq
+    </div>
+
+    <div class="activity-item">
+    💰 Pembayaran booking Lapangan B berhasil
+    </div>
+
+  <div class="activity-item">
+    🏸 Lapangan A selesai digunakan
+  </div>
+
+</div>
+
+  </div>
+
 </ion-content>

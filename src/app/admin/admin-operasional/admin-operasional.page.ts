@@ -1,20 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
+
+import {
+  IonContent
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-admin-operasional',
   templateUrl: './admin-operasional.page.html',
   styleUrls: ['./admin-operasional.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [
+    CommonModule,
+    IonContent
+  ]
 })
-export class AdminOperasionalPage implements OnInit {
+export class AdminOperasionalPage {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) {}
 
-  ngOnInit() {
+  goToLapangan() {
+    this.router.navigate(['/admin-lapangan']);
+  }
+
+  goToBooking() {
+    this.router.navigate(['/admin-booking']);
   }
 
 }

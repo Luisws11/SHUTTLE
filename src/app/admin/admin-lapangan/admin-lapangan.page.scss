@@ -1,0 +1,183 @@
+ion-content {
+  --background: #f4f7fb;
+}
+
+.lapangan-container {
+  padding: 20px;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.header p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.add-btn {
+  border: none;
+  background: linear-gradient(
+    135deg,
+    #009245,
+    #00b050
+  );
+
+  color: white;
+
+  padding: 12px 18px;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 8px 20px rgba(0, 146, 69, .25);
+}
+
+/* CARD */
+
+.lapangan-card {
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 18px;
+
+  margin-bottom: 16px;
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+
+  transition: all .25s ease;
+}
+
+.lapangan-card:active {
+  transform: scale(.98);
+}
+
+.lapangan-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ICON */
+
+.lapangan-icon {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 18px;
+
+  background: #e8fff1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 26px;
+}
+
+/* INFO */
+
+.lapangan-info {
+  flex: 1;
+}
+
+.lapangan-info h3 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #1e293b;
+}
+
+.lapangan-info span {
+  display: block;
+  margin-top: 4px;
+
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* PRICE */
+
+.price {
+  margin-top: 18px;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  color: #009245;
+}
+
+/* ACTION */
+
+.action-row {
+  display: flex;
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+.edit-btn,
+.delete-btn {
+  flex: 1;
+
+  border: none;
+
+  padding: 12px;
+
+  border-radius: 14px;
+
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background: #e8fff1;
+  color: #009245;
+}
+
+.delete-btn {
+  background: #ffe5e5;
+  color: #e53935;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+  text-align: center;
+
+  margin-top: 80px;
+}
+
+.empty-icon {
+  font-size: 70px;
+}
+
+.empty-state h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+
+  color: #1e293b;
+}
+
+.empty-state p {
+  color: #64748b;
+  font-size: 14px;
+}
