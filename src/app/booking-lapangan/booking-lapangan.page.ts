@@ -84,4 +84,8 @@ export class BookingLapanganPage {
   this.router.navigate(['/detail-lapangan']);
 }
 
+goToInformasi() {
+  this.router.navigate(['/detail-lapangan']);
+}
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import {
   IonContent,
@@ -43,19 +44,25 @@ import {
 })
 export class ProfilePage implements OnInit {
 
-  constructor() {
+constructor(
+  private router: Router
+) {
 
-    addIcons({
-      personOutline,
-      lockClosedOutline,
-      receiptOutline,
-      helpCircleOutline,
-      informationCircleOutline,
-      chevronForwardOutline
-    });
+  addIcons({
+    personOutline,
+    lockClosedOutline,
+    receiptOutline,
+    helpCircleOutline,
+    informationCircleOutline,
+    chevronForwardOutline
+  });
 
-  }
+}
 
   ngOnInit() {}
+
+  goToInformasiAkun() {
+  this.router.navigate(['/informasi-akun']);
+}
 
 }

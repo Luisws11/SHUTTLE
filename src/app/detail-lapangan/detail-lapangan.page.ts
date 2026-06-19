@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 
+
 import {
   IonContent,
   IonIcon
@@ -52,6 +53,10 @@ export class DetailLapanganPage {
 
   goBack() {
   this.router.navigate(['/home']);
+}
+
+goToJadwal() {
+  this.router.navigate(['/booking-lapangan']);
 }
 
 }
