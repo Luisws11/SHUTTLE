@@ -122,69 +122,121 @@
 </div>
 
     <!-- BOOKING -->
-    <h3 class="section-title">
-      Booking Terbaru
-    </h3>
+    <!-- BOOKING TERBARU -->
 
-    <div
-      class="booking-card"
-      *ngFor="let booking of recentBookings">
+<h3 class="section-title">
+  Booking Terbaru
+</h3>
 
-      <div class="booking-left">
+<div
+  class="booking-card"
+  *ngFor="let booking of recentBookings">
 
-        <div class="avatar">
-          {{ booking.nama.charAt(0) }}
-        </div>
+  <div class="booking-left">
 
-        <div>
+    <div class="booking-avatar">
+      {{ booking.nama.charAt(0) }}
+    </div>
 
-          <div class="booking-name">
-            {{ booking.nama }}
-          </div>
+    <div class="booking-info">
 
-          <div class="booking-detail">
-            {{ booking.lapangan }}
-          </div>
+      <h4>
+        {{ booking.nama }}
+      </h4>
 
-          <div class="booking-time">
-            {{ booking.jam }}
-          </div>
+      <p>
+        {{ booking.lapangan }}
+      </p>
 
-        </div>
-
-      </div>
-
-      <div
-        class="status"
-        [ngClass]="booking.status.toLowerCase()">
-
-        {{ booking.status }}
-
-      </div>
+      <span>
+        {{ booking.jam }}
+      </span>
 
     </div>
 
-    <!-- AKTIVITAS -->
-    <h3 class="section-title">
-      Aktivitas Hari Ini
-    </h3>
+  </div>
 
-    <div class="activity-card">
+  <div
+    class="status"
+    [ngClass]="booking.status.toLowerCase()">
 
-    <div class="activity-item">
-    🔔 Booking baru masuk dari Thoriq
-    </div>
+    {{ booking.status }}
 
-    <div class="activity-item">
-    💰 Pembayaran booking Lapangan B berhasil
-    </div>
-
-  <div class="activity-item">
-    🏸 Lapangan A selesai digunakan
   </div>
 
 </div>
 
+<!-- AKTIVITAS -->
+
+<h3 class="section-title">
+  Aktivitas Hari Ini
+</h3>
+
+<div class="activity-card">
+
+  <div class="activity-item">
+
+    <div class="activity-icon">
+      🔔
+    </div>
+
+    <div class="activity-content">
+
+      <div class="activity-title">
+        Booking Baru
+      </div>
+
+      <div class="activity-desc">
+        Rizky melakukan booking Lapangan A
+      </div>
+
+    </div>
+
   </div>
+
+  <div class="activity-item">
+
+    <div class="activity-icon">
+      💰
+    </div>
+
+    <div class="activity-content">
+
+      <div class="activity-title">
+        Pembayaran Berhasil
+      </div>
+
+      <div class="activity-desc">
+        Pembayaran Lapangan B berhasil diterima
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="activity-item">
+
+    <div class="activity-icon">
+      🏸
+    </div>
+
+    <div class="activity-content">
+
+      <div class="activity-title">
+        Sesi Selesai
+      </div>
+
+      <div class="activity-desc">
+        Lapangan A selesai digunakan
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- TUTUP DASHBOARD CONTAINER -->
+</div>
 
 </ion-content>
