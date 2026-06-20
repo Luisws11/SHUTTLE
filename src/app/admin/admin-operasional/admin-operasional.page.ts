@@ -22,12 +22,32 @@ export class AdminOperasionalPage {
     private router: Router
   ) {}
 
+  // MENU OPERASIONAL
+
   goToLapangan() {
     this.router.navigate(['/admin-lapangan']);
   }
 
   goToBooking() {
     this.router.navigate(['/admin-booking']);
+  }
+
+  // NAVBAR
+
+  goToDashboard() {
+    this.router.navigate(['/admin-dashboard']);
+  }
+
+  goToOperasional() {
+    this.router.navigate(['/admin-operasional']);
+  }
+
+  goToLaporan() {
+    this.router.navigate(['/admin-laporan']);
+  }
+
+  goToProfil() {
+    this.router.navigate(['/admin-profil']);
   }
 
 }

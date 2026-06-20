@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonContent } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
+
+import {
+  IonContent
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-admin-profil',
@@ -13,6 +17,10 @@ import { IonContent } from '@ionic/angular/standalone';
   ]
 })
 export class AdminProfilPage {
+
+  constructor(
+    private router: Router
+  ) {}
 
   admin = {
     nama: 'Admin SHUTTLE',
@@ -31,6 +39,24 @@ export class AdminProfilPage {
 
   logout() {
     console.log('Logout');
+  }
+
+  // NAVBAR
+
+  goToDashboard() {
+    this.router.navigate(['/admin-dashboard']);
+  }
+
+  goToOperasional() {
+    this.router.navigate(['/admin-operasional']);
+  }
+
+  goToLaporan() {
+    this.router.navigate(['/admin-laporan']);
+  }
+
+  goToProfil() {
+    this.router.navigate(['/admin-profil']);
   }
 
 }

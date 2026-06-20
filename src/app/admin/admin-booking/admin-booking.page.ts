@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 import {
   IonContent
@@ -16,6 +17,10 @@ import {
   ]
 })
 export class AdminBookingPage {
+
+  constructor(
+    private router: Router
+  ) {}
 
   bookingList = [
     {
@@ -39,7 +44,31 @@ export class AdminBookingPage {
   ];
 
   lihatDetail(data: any) {
-    console.log(data);
+    console.log('Detail Booking:', data);
+  }
+
+  setujuiBooking(booking: any) {
+    booking.status = 'Disetujui';
+  }
+
+  tolakBooking(booking: any) {
+    booking.status = 'Ditolak';
+  }
+
+  goToDashboard() {
+    this.router.navigate(['/admin-dashboard']);
+  }
+
+  goToOperasional() {
+    this.router.navigate(['/admin-operasional']);
+  }
+
+  goToLaporan() {
+    this.router.navigate(['/admin-laporan']);
+  }
+
+  goToProfil() {
+    this.router.navigate(['/admin-profil']);
   }
 
 }

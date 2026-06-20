@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonContent } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -13,6 +14,10 @@ import { IonContent } from '@ionic/angular/standalone';
   ]
 })
 export class AdminDashboardPage {
+
+  constructor(
+    private router: Router
+  ) {}
 
   stats = [
     {
@@ -57,5 +62,25 @@ export class AdminDashboardPage {
       status: 'Ditolak'
     }
   ];
+
+  goToOperasional() {
+    this.router.navigate(['/admin-operasional']);
+  }
+
+  goToLapangan() {
+    this.router.navigate(['/admin-lapangan']);
+  }
+
+  goToBooking() {
+    this.router.navigate(['/admin-booking']);
+  }
+
+  goToLaporan() {
+    this.router.navigate(['/admin-laporan']);
+  }
+
+  goToProfil() {
+    this.router.navigate(['/admin-profil']);
+  }
 
 }

@@ -7,39 +7,74 @@ ion-content {
 }
 
 .header {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .header h1 {
   margin: 0;
+
   font-size: 30px;
   font-weight: 800;
+
   color: #1e293b;
 }
 
 .header p {
   margin-top: 6px;
+
   color: #64748b;
 }
 
+/* BACK BUTTON */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin-bottom: 14px;
+
+  color: #64748b;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.back-link:hover {
+  color: #009245;
+}
+/* SEARCH */
+
 .search-box {
-  background: white;
+  background: #ffffff;
+
   padding: 14px 16px;
+
   border-radius: 14px;
+
   margin-bottom: 18px;
 
   color: #94a3b8;
 
-  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
 }
 
+/* CARD */
+
 .booking-card {
-  background: white;
+  background: #ffffff;
+
   border-radius: 20px;
+
   padding: 18px;
+
   margin-bottom: 16px;
 
-  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .05);
 }
 
 .booking-top {
@@ -50,21 +85,32 @@ ion-content {
 
 .booking-top h3 {
   margin: 0;
+
+  font-size: 17px;
+  font-weight: 700;
+
   color: #1e293b;
 }
 
 .booking-top span {
   font-size: 13px;
+
   color: #64748b;
 }
 
 .booking-time {
   margin-top: 12px;
+
+  font-size: 14px;
+
   color: #475569;
 }
 
+/* STATUS */
+
 .status {
   padding: 8px 12px;
+
   border-radius: 999px;
 
   font-size: 12px;
@@ -86,9 +132,44 @@ ion-content {
   color: #dc2626;
 }
 
+/* ACTION BUTTON */
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 14px;
+}
+
+.approve-btn,
+.reject-btn {
+  flex: 1;
+
+  border: none;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  font-weight: 700;
+}
+
+.approve-btn {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.reject-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* DETAIL BUTTON */
+
 .detail-btn {
   width: 100%;
-  margin-top: 16px;
+
+  margin-top: 14px;
 
   border: none;
 

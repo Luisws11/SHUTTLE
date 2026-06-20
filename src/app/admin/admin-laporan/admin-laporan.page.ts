@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonContent } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
+
+import {
+  IonContent
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-admin-laporan',
@@ -13,6 +17,10 @@ import { IonContent } from '@ionic/angular/standalone';
   ]
 })
 export class AdminLaporanPage {
+
+  constructor(
+    private router: Router
+  ) {}
 
   transaksiList = [
     {
@@ -31,5 +39,21 @@ export class AdminLaporanPage {
       status: 'Selesai'
     }
   ];
+
+  goToDashboard() {
+    this.router.navigate(['/admin-dashboard']);
+  }
+
+  goToOperasional() {
+    this.router.navigate(['/admin-operasional']);
+  }
+
+  goToLaporan() {
+    this.router.navigate(['/admin-laporan']);
+  }
+
+  goToProfil() {
+    this.router.navigate(['/admin-profil']);
+  }
 
 }

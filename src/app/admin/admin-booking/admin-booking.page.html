@@ -2,9 +2,22 @@
 
   <div class="booking-container">
 
+    <div
+      class="back-link"
+      (click)="goToOperasional()">
+
+      ← Operasional
+
+    </div>
+
     <div class="header">
+
       <h1>Kelola Booking</h1>
-      <p>Kelola seluruh pemesanan lapangan</p>
+
+      <p>
+        Kelola seluruh pemesanan lapangan
+      </p>
+
     </div>
 
     <div class="search-box">
@@ -18,11 +31,13 @@
       <div class="booking-top">
 
         <div>
+
           <h3>{{ booking.nama }}</h3>
 
           <span>
             {{ booking.lapangan }}
           </span>
+
         </div>
 
         <div
@@ -41,6 +56,28 @@
 
       <div class="booking-time">
         🕒 {{ booking.jam }}
+      </div>
+
+      <div
+        class="action-buttons"
+        *ngIf="booking.status === 'Pending'">
+
+        <button
+          class="approve-btn"
+          (click)="setujuiBooking(booking)">
+
+          ✓ Terima
+
+        </button>
+
+        <button
+          class="reject-btn"
+          (click)="tolakBooking(booking)">
+
+          ✕ Tolak
+
+        </button>
+
       </div>
 
       <button
