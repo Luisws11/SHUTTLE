@@ -105,9 +105,15 @@ export const routes: Routes = [
     loadComponent: () => import('./admin/admin-booking/admin-booking.page').then( m => m.AdminBookingPage)
   },
   {
+    path: 'detail-pesanan',
+    loadComponent: () => import('./detail-pesanan/detail-pesanan.page').then( m => m.DetailPesananPage)
+  },
+  {
     path: '**',
     redirectTo: 'onboarding'
   },
+  
+
   
 
 ];

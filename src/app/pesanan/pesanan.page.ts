@@ -78,4 +78,16 @@ export class PesananPage {
   goToLapangan() {
   this.router.navigate(['/lapangan']);
 }
+openDetail(booking: any) {
+
+  this.router.navigate(
+    ['/detail-pesanan'],
+    {
+      state: {
+        booking: booking
+      }
+    }
+  );
+
+}
 }

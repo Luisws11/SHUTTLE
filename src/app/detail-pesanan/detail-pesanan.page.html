@@ -1,0 +1,93 @@
+<ion-content [fullscreen]="true">
+
+  <!-- HEADER IMAGE -->
+  <div class="hero-section">
+
+    <img
+      [src]="booking?.image"
+      class="hero-image">
+
+    <div
+      class="back-button"
+      (click)="goBack()">
+
+      <ion-icon name="arrow-back-circle-outline"></ion-icon>
+
+    </div>
+
+  </div>
+
+  <!-- CONTENT -->
+  <div class="detail-card">
+
+    <div class="status">
+      Dikonfirmasi
+    </div>
+
+    <h2>{{ booking?.venue }}</h2>
+
+    <div class="info-item">
+      📍 {{ booking?.location }}
+    </div>
+
+    <div class="info-item">
+      📅 {{ booking?.date }}
+    </div>
+
+    <div class="info-item">
+      🕒 {{ booking?.time }}
+    </div>
+
+    <div class="info-item">
+      🏸 {{ booking?.court }}
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="booking-code">
+
+      <span>Kode Booking</span>
+
+      <h3>SH-2026-001</h3>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="price-section">
+
+      <span>Total Pembayaran</span>
+
+      <h1>{{ booking?.price }}</h1>
+
+    </div>
+
+  </div>
+
+  <!-- QR -->
+  <div class="ticket-card">
+
+    <h3>Tunjukkan Saat Check-In</h3>
+
+    <img
+      src="assets/images/logo/qr.png"
+      class="qr-code">
+
+    <p>
+      Scan QR Code ini saat datang ke lokasi.
+    </p>
+
+  </div>
+
+  <div class="bottom-space"></div>
+
+  <!-- BUTTON -->
+  <div class="bottom-button">
+
+    <button>
+      Download Tiket
+    </button>
+
+  </div>
+
+</ion-content>
