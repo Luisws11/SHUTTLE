@@ -48,6 +48,24 @@ export class LapanganPage {
     this.router.navigate(['/pesanan']);
   }
 
+  openCourt(court: any): void {
+
+  this.router.navigate(
+    ['/detail-lapangan'],
+    {
+      state: {
+        court: {
+          name: court.nama,
+          location: court.lokasi,
+          price: court.harga,
+          image: court.image
+        }
+      }
+    }
+  );
+
+}
+
   searchText = '';
 
   selectedFilter = 'Semua';

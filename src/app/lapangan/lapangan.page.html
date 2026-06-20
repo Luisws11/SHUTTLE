@@ -60,7 +60,8 @@
 
       <div
         class="lapangan-card"
-        *ngFor="let item of lapanganList">
+        *ngFor="let item of lapanganList"
+       (click)="openCourt(item)">
 
         <!-- Image -->
         <div class="image-wrapper">

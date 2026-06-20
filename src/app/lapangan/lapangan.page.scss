@@ -316,3 +316,12 @@ ion-content {
 
   color: #111827;
 }
+
+.lapangan-card {
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.lapangan-card:active {
+  transform: scale(.97);
+}
