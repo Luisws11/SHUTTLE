@@ -271,27 +271,7 @@ ion-content {
 
 /* BOTTOM NAV */
 
-.bottom-nav {
-  position: fixed;
-
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-
-  height: 72px;
-
-  background: white;
-
-  border-radius: 22px;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,.12);
-
-  z-index: 999;
-}
+/* BOTTOM NAV */
 
 .bottom-nav {
   position: fixed;
@@ -303,13 +283,13 @@ ion-content {
 
   background: #fff;
 
-  border-radius: 24px;
+  border-radius: 22px;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
   z-index: 999;
 }
@@ -321,9 +301,46 @@ ion-content {
 
   gap: 4px;
 
-  color: #9ca3af;
+  cursor: pointer;
+}
 
-  transition: .3s;
+.nav-icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s ease;
+}
+
+.nav-icon ion-icon {
+  font-size: 22px;
+  color: #8e8e8e;
+}
+
+.nav-item span {
+  font-size: 12px;
+  color: #8e8e8e;
+  font-weight: 500;
+}
+
+/* ACTIVE */
+
+.nav-item.active .nav-icon {
+  background: #22c55e;
+}
+
+.nav-item.active .nav-icon ion-icon {
+  color: white;
+}
+
+.nav-item.active span {
+  color: #22c55e;
+  font-weight: 700;
 }
 
 .icon-wrapper {
