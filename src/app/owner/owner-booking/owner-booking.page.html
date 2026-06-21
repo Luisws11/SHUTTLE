@@ -1,0 +1,77 @@
+<ion-content [fullscreen]="true">
+
+  <div class="booking-container">
+
+    <div
+      class="back-link"
+      (click)="goBack()">
+
+      ← Dashboard
+
+    </div>
+
+    <h1>Booking Masuk</h1>
+
+    <p class="subtitle">
+      Kelola seluruh booking pelanggan
+    </p>
+
+    <div
+      class="booking-card"
+      *ngFor="let booking of bookings">
+
+      <div class="booking-header">
+
+        <div>
+
+          <h3>{{ booking.nama }}</h3>
+
+          <span>
+            {{ booking.lapangan }}
+          </span>
+
+        </div>
+
+        <div class="status">
+          {{ booking.status }}
+        </div>
+
+      </div>
+
+      <div class="booking-detail">
+
+        <p>
+          📅 {{ booking.tanggal }}
+        </p>
+
+        <p>
+          🕒 {{ booking.jam }}
+        </p>
+
+      </div>
+
+      <div class="action-row">
+
+        <button
+          class="accept-btn"
+          (click)="terimaBooking(booking)">
+
+          Terima
+
+        </button>
+
+        <button
+          class="reject-btn"
+          (click)="tolakBooking(booking)">
+
+          Tolak
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

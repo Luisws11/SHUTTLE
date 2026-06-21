@@ -1,0 +1,147 @@
+<ion-content [fullscreen]="true">
+
+  <div class="page-container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div>
+
+        <span class="welcome">
+          Selamat Datang 👋
+        </span>
+
+        <h1>
+          GOR Dagus
+        </h1>
+
+      </div>
+
+      <div
+        class="avatar"
+        (click)="goToProfil()">
+
+        M
+
+      </div>
+
+    </div>
+
+    <!-- HERO -->
+
+    <div class="hero-card">
+
+      <div>
+
+        <h2>
+          8 Booking Hari Ini
+        </h2>
+
+        <p>
+          Kelola booking dan lapangan dengan mudah.
+        </p>
+
+      </div>
+
+      <div class="hero-icon">
+        🏸
+      </div>
+
+    </div>
+
+    <!-- STATISTIK -->
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <h3>125</h3>
+        <span>Total Booking</span>
+      </div>
+
+      <div class="stat-card">
+        <h3>8</h3>
+        <span>Hari Ini</span>
+      </div>
+
+      <div class="stat-card">
+        <h3>Rp 4.5 Jt</h3>
+        <span>Pendapatan</span>
+      </div>
+
+      <div class="stat-card">
+        <h3>4</h3>
+        <span>Lapangan Aktif</span>
+      </div>
+
+    </div>
+
+    <!-- OPERASIONAL -->
+
+    <h2 class="section-title">
+      Operasional
+    </h2>
+
+    <!-- KELOLA LAPANGAN -->
+
+    <div
+      class="menu-card"
+      (click)="goToLapangan()">
+
+      <span>🏸</span>
+
+      <div>
+
+        <h3>Kelola Lapangan</h3>
+
+        <p>
+          Tambah dan edit lapangan
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- BOOKING -->
+
+    <div
+      class="menu-card"
+      (click)="goToBooking()">
+
+      <span>📅</span>
+
+      <div>
+
+        <h3>Booking Masuk</h3>
+
+        <p>
+          Kelola pemesanan pelanggan
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- PENDAPATAN -->
+
+    <div
+      class="menu-card"
+      (click)="goToPendapatan()">
+
+      <span>💰</span>
+
+      <div>
+
+        <h3>Pendapatan</h3>
+
+        <p>
+          Lihat pemasukan lapangan
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

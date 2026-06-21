@@ -1,0 +1,51 @@
+ion-content {
+  --background: #f5f7fb;
+}
+
+.container {
+  padding: 20px;
+}
+
+.back-link {
+  color: #64748b;
+  cursor: pointer;
+
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #64748b;
+
+  margin-bottom: 24px;
+}
+
+.income-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  margin-bottom: 16px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.income-card span {
+  color: #64748b;
+}
+
+.income-card h2 {
+  margin-top: 8px;
+
+  color: #009245;
+
+  font-size: 28px;
+}

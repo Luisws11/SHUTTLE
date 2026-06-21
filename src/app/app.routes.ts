@@ -109,9 +109,31 @@ export const routes: Routes = [
     loadComponent: () => import('./detail-pesanan/detail-pesanan.page').then( m => m.DetailPesananPage)
   },
   {
+    path: 'owner-dashboard',
+    loadComponent: () => import('./owner/owner-dashboard/owner-dashboard.page').then( m => m.OwnerDashboardPage)
+  },
+  {
+    path: 'owner-lapangan',
+    loadComponent: () => import('./owner/owner-lapangan/owner-lapangan.page').then( m => m.OwnerLapanganPage)
+  },
+  {
+    path: 'owner-booking',
+    loadComponent: () => import('./owner/owner-booking/owner-booking.page').then( m => m.OwnerBookingPage)
+  },
+  {
+    path: 'owner-pendapatan',
+    loadComponent: () => import('./owner/owner-pendapatan/owner-pendapatan.page').then( m => m.OwnerPendapatanPage)
+  },
+  {
+    path: 'owner-profil',
+    loadComponent: () => import('./owner/owner-profil/owner-profil.page').then( m => m.OwnerProfilPage)
+  },
+
+  {
     path: '**',
     redirectTo: 'onboarding'
   },
+ 
   
 
   

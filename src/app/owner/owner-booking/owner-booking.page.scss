@@ -1,0 +1,117 @@
+ion-content {
+  --background: #f5f7fb;
+}
+
+.booking-container {
+  padding: 20px;
+}
+
+.back-link {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #1f2937;
+}
+
+.subtitle {
+  margin-top: 6px;
+  margin-bottom: 24px;
+
+  color: #64748b;
+}
+
+.booking-card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 18px;
+
+  margin-bottom: 16px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-header h3 {
+  margin: 0;
+
+  color: #1f2937;
+}
+
+.booking-header span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.status {
+  background: #e8f7ee;
+  color: #009245;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.booking-detail {
+  margin-top: 14px;
+}
+
+.booking-detail p {
+  margin: 6px 0;
+
+  color: #64748b;
+}
+
+.action-row {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 16px;
+}
+
+.accept-btn,
+.reject-btn {
+  flex: 1;
+
+  height: 42px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.accept-btn {
+  background: #009245;
+  color: white;
+}
+
+.reject-btn {
+  background: #ffe2e2;
+  color: #ff4d4f;
+}

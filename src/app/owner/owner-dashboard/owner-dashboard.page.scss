@@ -1,0 +1,119 @@
+ion-content {
+  --background: #f5f7fb;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome {
+  color: #666;
+  font-size: 13px;
+}
+
+.header h1 {
+  margin-top: 4px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #009245;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+.hero-card {
+  margin-top: 20px;
+
+  background: #009245;
+  color: white;
+
+  border-radius: 24px;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-icon {
+  font-size: 50px;
+}
+
+.stats-grid {
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.stat-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 18px;
+}
+
+.stat-card h3 {
+  margin: 0;
+
+  color: #009245;
+}
+
+.stat-card span {
+  color: #666;
+  font-size: 13px;
+}
+
+.section-title {
+  margin-top: 24px;
+}
+
+.menu-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  display: flex;
+  gap: 14px;
+  align-items: center;
+
+  margin-bottom: 12px;
+
+  cursor: pointer;
+}
+
+.menu-card span {
+  font-size: 28px;
+}
+
+.menu-card h3 {
+  margin: 0;
+}
+
+.menu-card p {
+  margin-top: 4px;
+  color: #666;
+}
